@@ -1,7 +1,3 @@
-function add(a, b) {
- return a + b;
-}
-
 function Carbon(transportation, mile, total) {
   this.transportation = transportation,
   this.mile = mile,
@@ -163,21 +159,22 @@ $(document).ready(function() {
 
     var takeoutDayofWeek = parseInt($(".takeoutSelectWeekday").val());
     takeoutCarbon.arraySum();
-    if (takeoutDayofWeek === 1) {
-      $("#mondayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
-    } else if (takeoutDayofWeek === 2) {
-      $("#tuesdayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
-    } else if (takeoutDayofWeek === 3) {
-      $("#wednesdayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
-    } else if (takeoutDayofWeek === 4) {
-      $("#thursdayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
-    } else if (takeoutDayofWeek === 5) {
-      $("#fridayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
-    } else if (takeoutDayofWeek === 6) {
-      $("#saturdayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
-    } else if (takeoutDayofWeek === 7) {
-      $("#sundayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
-    }
+
+      if (takeoutDayofWeek === 1) {
+        $("#mondayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
+      } else if (takeoutDayofWeek === 2) {
+        $("#tuesdayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
+      } else if (takeoutDayofWeek === 3) {
+        $("#wednesdayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
+      } else if (takeoutDayofWeek === 4) {
+        $("#thursdayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
+      } else if (takeoutDayofWeek === 5) {
+        $("#fridayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
+      } else if (takeoutDayofWeek === 6) {
+        $("#saturdayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
+      } else if (takeoutDayofWeek === 7) {
+        $("#sundayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
+      }
 
   })
 });
