@@ -25,30 +25,27 @@ Carbon.prototype.carbonFootprint = function() {
   }
 }
 
-function Coffee(typeCup, count, hot, cold, sleeve, straw, total) {
-  this.typeCup = typeCup,
+function Coffee(cupType, count, sleeve, straw, total) {
+  this.cupType = cupType,
   this.count = count,
-  this.hot = hot
-  this.cold = cold
   this.sleeve = sleeve
   this.straw = straw
   this.total = total
   this.totalAccessories = []
 }
 
-Coffee.prototype.noCup = function() {
-  return this.total = this.count * 100;
-}
-
-Coffee.prototype.ownCup = function() {
-  return this.total = this.count * 50;
-}
-Coffee.prototype.typeOfCofffee = function() {
-  this.hot = this.hot += 50
-  this.cold = this.cold += 50
-  this.sleeve = this.sleeve += 70
-  this.straw = this.straw += 80
-  this.totalAccessories.push(this.hot,this.cold,this.sleeve,this.straw);
+// Coffee.prototype.noCup = function() {
+//   return this.total = this.count * 100;
+// }
+//
+// Coffee.prototype.ownCup = function() {
+//   return this.total = this.count * 50;
+// }
+Coffee.prototype.typeOfCoffee = function() {
+  this.cupType = this.cupType * 100
+  this.sleeve = this.sleeve * 70
+  this.straw = this.straw * 80
+  this.totalAccessories.push(this.cupType, this.sleeve, this.straw);
 
   return this.totalAccessories;
 }
@@ -100,6 +97,7 @@ $(document).ready(function() {
   $(".inputForm").submit(function(event) {
     event.preventDefault();
     var dayOfWeek = $(".selectWeekday").val();
+
     var inputMile = parseInt($("#mileage").val());
     var transportation = $("input:radio[name=transportation]:checked").val();
 
@@ -212,6 +210,19 @@ $(document).ready(function() {
       } else if (takeoutDayofWeek === 7) {
         $("#sundayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
       }
+  });
+  $(".coffeeForm").submit(function(event) {
+    event.preventDefault();
+    var coffeeDayofWeek = parseInt($(".selectWeekday").val());
+    var cupType = parseInt($(".typeofcup"))
+    var inputCoffee = parseInt($("#cupsofcoffee").val());
+    var sleeve = parseInt($(".sleeve").val());
+    var straw = parseInt($(".straw").val());
 
-  })
+    var coffeeOrder = new Coffee(cupType, inputCoffee, sleeve, straw, total)
+
+    var coffeeDayofWeek = parseIn($(".selectWeekday").val());
+    coffeeOrder.totalCoffeeAccessories();
+
+  });
 });
