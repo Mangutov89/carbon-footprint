@@ -18,32 +18,40 @@
           <h2>Monday</h2>
           <div class="mondayTracker">
             <p>Traveled by: <span id="mondayCommute"></span></p>
-            <p>Commute footprint: <span id="mondayCommuteFootprint"></span></p>
-            <p>Takeout footprint: <span id="mondayTakeoutFootprint"></span></p>
+            <p>Commute Footprint: <span id="mondayCommuteFootprint"></span></p>
+            <p>Takeout Footprint: <span id="mondayTakeoutFootprint"></span></p>
+            <p>Coffee Footprint: <span id="mondayCoffeeFootprint"></span></p>
+            <p>Total Daily Carbon Footprint: <span id="mondayDailyFootprint"></span></p>
           </div>
         </div>
         <div class="col-md-3" id="day2">
           <h2>Tuesday</h2>
           <div class="tuesdayTracker">
             <p>Traveled by: <span id="tuesdayCommute"></span></p>
-            <p>Commute footprint: <span id="tuesdayCommuteFootprint"></span></p>
-            <p>Takeout footprint: <span id="tuesdayTakeoutFootprint"></span></p>
+            <p>Commute Footprint: <span id="tuesdayCommuteFootprint"></span></p>
+            <p>Takeout Footprint: <span id="tuesdayTakeoutFootprint"></span></p>
+            <p>Coffee Footprint: <span id="tuesdayCoffeeFootprint"></span></p>
+            <p>Total Daily Carbon Footprint: <span id="tuesdayDailyFootprint"></span></p>
           </div>
         </div>
         <div class="col-md-3"  id="day3">
           <h2>Wednesday</h2>
           <div class="wednesdayTracker">
             <p>Traveled by: <span id="wednesdayCommute"></span></p>
-            <p>Commute footprint: <span id="wednesdayCommuteFootprint"></span></p>
-            <p>Takeout footprint: <span id="wednesdayTakeoutFootprint"></span></p>
+            <p>Commute Footprint: <span id="wednesdayCommuteFootprint"></span></p>
+            <p>Takeout Footprint: <span id="wednesdayTakeoutFootprint"></span></p>
+            <p>Coffee Footprint: <span id="wednesdayCoffeeFootprint"></span></p>
+            <p>Total Daily Carbon Footprint: <span id="wednesdayDailyFootprint"></span></p>
           </div>
         </div>
         <div class="col-md-3"  id="day4">
           <h2>Thursday</h2>
           <div class="thursdayTracker">
             <p>Traveled by: <span id="thursdayCommute"></span></p>
-            <p>Commute footprint: <span id="thursdayCommuteFootprint"></span></p>
-            <p>Takeout footprint: <span id="thursdayTakeoutFootprint"></span></p>
+            <p>Commute Footprint: <span id="thursdayCommuteFootprint"></span></p>
+            <p>Takeout Footprint: <span id="thursdayTakeoutFootprint"></span></p>
+            <p>Coffee Footprint: <span id="thursdayCoffeeFootprint"></span></p>
+            <p>Total Daily Carbon Footprint: <span id="thursdayDailyFootprint"></span></p>
           </div>
         </div>
       </div>
@@ -52,24 +60,30 @@
           <h2>Friday</h2>
           <div class="fridayTracker">
             <p>Traveled by: <span id="fridayCommute"></span></p>
-            <p>Commute footprint: <span id="fridayCommuteFootprint"></span></p>
-            <p>Takeout footprint: <span id="fridayTakeoutFootprint"></span></p>
+            <p>Commute Footprint: <span id="fridayCommuteFootprint"></span></p>
+            <p>Takeout Footprint: <span id="fridayTakeoutFootprint"></span></p>
+            <p>Coffee Footprint: <span id="fridayCoffeeFootprint"></span></p>
+            <p>Total Daily Carbon Footprint: <span id="fridayDailyFootprint"></span></p>
           </div>
         </div>
         <div class="col-md-3" id="day6">
           <h2>Saturday</h2>
           <div class="saturdayTracker">
             <p>Traveled by: <span id="saturdayCommute"></span></p>
-            <p>Commute footprint: <span id="saturdayCommuteFootprint"></span></p>
-            <p>Takeout footprint: <span id="saturdayTakeoutFootprint"></span></p>
+            <p>Commute Footprint: <span id="saturdayCommuteFootprint"></span></p>
+            <p>Takeout Footprint: <span id="saturdayTakeoutFootprint"></span></p>
+            <p>Coffee Footprint: <span id="saturdayCoffeeFootprint"></span></p>
+            <p>Total Daily Carbon Footprint: <span id="saturdayDailyFootprint"></span></p>
           </div>
         </div>
         <div class="col-md-3"  id="day7">
           <h2>Sunday</h2>
           <div class="sundayTracker">
             <p>Traveled by: <span id="sundayCommute"></span></p>
-            <p>Commute footprint: <span id="sundayCommuteFootprint"></span></p>
-            <p>Takeout footprint: <span id="sundayTakeoutFootprint"></span></p>
+            <p>Commute Footprint: <span id="sundayCommuteFootprint"></span></p>
+            <p>Takeout Footprint: <span id="sundayTakeoutFootprint"></span></p>
+            <p>Coffee Footprint: <span id="sundayCoffeeFootprint"></span></p>
+            <p>Total Daily Carbon Footprint: <span id="sundayDailyFootprint"></span></p>
           </div>
         </div>
         <div class="col-md-3"  id="weekSummary">
@@ -186,8 +200,8 @@
       </form>
 
       <form class="coffeeForm col-md-4">
-        <h5>coffee goes here</h5>
-        <select class="selectWeekday" name="">
+        <h3>Coffee Choices:</h3>
+        <select class="coffeeselectweekday" name="">
           <option value="1">Monday</option>
           <option value="2">Tuesday</option>
           <option value="3">Wednesday</option>
@@ -198,8 +212,8 @@
         </select>
         <select class="typeofcup" name="">
           <option>Did you bring your own cup?</option>
-          <option value="yes">Yes</option>
-          <option value="no">No</option>
+          <option value="0">No</option>
+          <option value="1">Yes</option>
         </select>
         <input type="number" id="cupsofcoffee" name="coffee" placeholder="How many cups would you like?"><br>
         <select class="sleeve">
@@ -212,6 +226,7 @@
           <option value="0">No</option>
           <option value="1">Yes</option>
         </select><br>
+      
 
 
       <button type="submit" name="button" class="btn btn-info">Calculate My Footprint!</button>

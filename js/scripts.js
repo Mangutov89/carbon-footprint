@@ -25,36 +25,29 @@ Carbon.prototype.carbonFootprint = function() {
   }
 }
 
-function Coffee(cupType, count, sleeve, straw, total) {
+function Coffee(cupType, count, sleeve, straw) {
   this.cupType = cupType,
   this.count = count,
-  this.sleeve = sleeve
+  this.sleeve = sleeve,
   this.straw = straw
-  this.total = total
+  this.total = 0
   this.totalAccessories = []
 }
 
-// Coffee.prototype.noCup = function() {
-//   return this.total = this.count * 100;
-// }
-//
-// Coffee.prototype.ownCup = function() {
-//   return this.total = this.count * 50;
-// }
 Coffee.prototype.typeOfCoffee = function() {
-  this.cupType = this.cupType * 100
-  this.sleeve = this.sleeve * 70
-  this.straw = this.straw * 80
+  this.cupType = ((this.cupType * 148) + 40) * this.count;
+  this.sleeve = this.sleeve * 2;
+  this.straw = this.straw * 6;
   this.totalAccessories.push(this.cupType, this.sleeve, this.straw);
 
   return this.totalAccessories;
 }
 
 Coffee.prototype.totalCoffeeAccessories = function() {
-  for(var i = 0; this.totalAccessories.length; i++) {
+  for(var i = 0;i < this.totalAccessories.length; i++) {
     this.total += this.totalAccessories[i];
   }
-  return this.totalAccessories;
+  return this.total + " grams of CO2";
 }
 
 
@@ -157,25 +150,25 @@ $(document).ready(function() {
     }
     if (transportation === "2") {
       if(dayOfWeek === "1") {
-        $("#mondayCommuteFootprint").text(dailyCarbon.calculateBike() + " grams of CO2 per passenger per mile");
+        $("#mondayCommuteFootprint").text(dailyCarbon.calculateBike() + " grams of CO2 per rider");
         $("#mondayCommute").text("Bike/Walk");
       } else if(dayOfWeek === "2") {
-        $("#tuesdayCommuteFootprint").text(dailyCarbon.calculateBike() + " grams of CO2 per passenger per mile");
+        $("#tuesdayCommuteFootprint").text(dailyCarbon.calculateBike() + " grams of CO2 per rider");
         $("#tuesdayCommute").text("Bike/Walk");
       } else if(dayOfWeek === "3") {
-        $("#wednesdayCommuteFootprint").text(dailyCarbon.calculateBike() + " grams of CO2 per passenger per mile");
+        $("#wednesdayCommuteFootprint").text(dailyCarbon.calculateBike() + " grams of CO2 per rider");
         $("#wednesdayCommute").text("Bike/Walk");
       } else if (dayOfWeek === "4"){
-        $("#thursdayCommuteFootprint").text(dailyCarbon.calculateBike() + " grams of CO2 per passenger per mile");
+        $("#thursdayCommuteFootprint").text(dailyCarbon.calculateBike() + " grams of CO2 per rider");
         $("#thursdayCommute").text("Bike/Walk");
       } else if (dayOfWeek === "5"){
-        $("#fridayCommuteFootprint").text(dailyCarbon.calculateBike() + " grams of CO2 per passenger per mile");
+        $("#fridayCommuteFootprint").text(dailyCarbon.calculateBike() + " grams of CO2 per rider");
         $("#fridayCommute").text("Bike/Walk");
       } else if (dayOfWeek === "6"){
-        $("#saturdayCommuteFootprint").text(dailyCarbon.calculateBike() + " grams of CO2 per passenger per mile");
+        $("#saturdayCommuteFootprint").text(dailyCarbon.calculateBike() + " grams of CO2 per rider");
         $("#saturdayCommute").text("Bike/Walk");
       } else if (dayOfWeek === "7"){
-        $("#sundayCommuteFootprint").text(dailyCarbon.calculateBike() + " grams of CO2 per passenger per mile");
+        $("#sundayCommuteFootprint").text(dailyCarbon.calculateBike() + " grams of CO2 per rider");
         $("#sundayCommute").text("Bike/Walk");
       }
     }
@@ -193,7 +186,7 @@ $(document).ready(function() {
     var takeoutCarbon = new toGoContainers(paperBag, plasticBag, recycledPaperBox, paperBox, bagasse, utensils, napkins);
 
     var takeoutDayofWeek = parseInt($(".takeoutSelectWeekday").val());
-    takeoutCarbon.arraySum()   ;
+    takeoutCarbon.arraySum();
 
       if (takeoutDayofWeek === 1) {
         $("#mondayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
@@ -213,16 +206,35 @@ $(document).ready(function() {
   });
   $(".coffeeForm").submit(function(event) {
     event.preventDefault();
-    var coffeeDayofWeek = parseInt($(".selectWeekday").val());
-    var cupType = parseInt($(".typeofcup"))
-    var inputCoffee = parseInt($("#cupsofcoffee").val());
+    // var coffeeDayofWeek = parseInt($(".coffeeselectweekday").val());
+    var cupType = parseInt($(".typeofcup").val());
+    var count = parseInt($("#cupsofcoffee").val());
     var sleeve = parseInt($(".sleeve").val());
     var straw = parseInt($(".straw").val());
 
-    var coffeeOrder = new Coffee(cupType, inputCoffee, sleeve, straw, total)
 
-    var coffeeDayofWeek = parseIn($(".selectWeekday").val());
-    coffeeOrder.totalCoffeeAccessories();
+    var coffeeOrder = new Coffee(cupType, count, sleeve, straw);
+
+    var coffeeDayofWeek = parseInt($(".coffeeselectweekday").val());
+    coffeeOrder.typeOfCoffee();
+    console.log(coffeeOrder)
+
+
+    if (coffeeDayofWeek === 1) {
+      $("#mondayCoffeeFootprint").text(coffeeOrder.totalCoffeeAccessories());
+    } else if (coffeeDayofWeek === 2) {
+      $("#tuesdayCoffeeFootprint").text(coffeeOrder.totalCoffeeAccessories());
+    } else if (coffeeDayofWeek === 3) {
+      $("#wednesdayCoffeeFootprint").text(coffeeOrder.totalCoffeeAccessories());
+    } else if (coffeeDayofWeek === 4) {
+      $("#thursdayCoffeeFootprint").text(coffeeOrder.totalCoffeeAccessories());
+    } else if (coffeeDayofWeek === 5) {
+      $("#fridayCoffeeFootprint").text(coffeeOrder.totalCoffeeAccessories());
+    } else if (coffeeDayofWeek === 6) {
+      $("#saturdayCoffeeFootprint").text(coffeeOrder.totalCoffeeAccessories());
+    } else if (coffeeDayofWeek === 7) {
+      $("#sundayCoffeeFootprint").text(coffeeOrder.totalCoffeeAccessories());
+    }
 
   });
 });
