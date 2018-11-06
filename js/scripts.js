@@ -61,12 +61,48 @@ Coffee.prototype.totalCoffeeAccessories = function() {
 }
 
 
+function toGoContainers (paperBag, plasticBag, recycledPaperBox, paperBox, bagasse, utensils, napkins) {
+  this.paperBag = paperBag,
+  this.plasticBag = plasticBag,
+  this.recycledPaperBox = recycledPaperBox,
+  this.paperBox = paperBox,
+  this.bagasse = bagasse,
+  this.utensils = utensils,
+  this.napkins = napkins,
+  this.totalTakeoutCarbonArray = [],
+  this.totalCarbonSum = 0
+}
+
+toGoContainers.prototype.arraySum = function() {
+  this.paperBag = this.paperBag * 12;
+  this.plasticBag = this.plasticBag * 12;
+  this.recycledPaperBox = this.recycledPaperBox * 41;
+  this.paperBox = this.paperBox * 41;
+  this.bagasse = this.bagasse * 21;
+  this.utensils = this.utensils * 13;
+  this.napkins = this.napkins * 4;
+  this.totalTakeoutCarbonArray.push(this.paperBag,this.plasticBag,this.recycledPaperBox,this.paperBox,this.bagasse,this.utensils,this.napkins);
+
+return this.totalTakeoutCarbonArray;
+}
+
+toGoContainers.prototype.totalCarbon = function() {
+  for (i = 0; i < this.totalTakeoutCarbonArray.length; i++) {
+    this.totalCarbonSum += this.totalTakeoutCarbonArray[i];
+  }
+  return this.totalCarbonSum + " grams of CO2";
+}
+
+
+
+
 $(document).ready(function() {
   $(".inputForm").submit(function(event) {
     event.preventDefault();
     var dayOfWeek = $(".selectWeekday").val();
     var inputMile = parseInt($("#mileage").val());
     var transportation = $("input:radio[name=transportation]:checked").val();
+
 
     var dailyCarbon = new Carbon(transportation, inputMile);
     console.log(dayOfWeek, inputMile, transportation);
@@ -146,4 +182,36 @@ $(document).ready(function() {
       }
     }
   });
+  $(".takeoutForm").submit(function(event) {
+    event.preventDefault();
+    var paperBag = parseInt($(".paperBag").val());
+    var plasticBag = parseInt($(".plasticBag").val());
+    var recycledPaperBox = parseInt($(".recycledPaperBox").val());
+    var paperBox = parseInt($(".paperBox").val());
+    var bagasse = parseInt($(".bagasse").val());
+    var utensils = parseInt($(".utensils").val());
+    var napkins = parseInt($(".napkins").val());
+
+    var takeoutCarbon = new toGoContainers(paperBag, plasticBag, recycledPaperBox, paperBox, bagasse, utensils, napkins);
+
+    var takeoutDayofWeek = parseInt($(".takeoutSelectWeekday").val());
+    takeoutCarbon.arraySum();
+
+      if (takeoutDayofWeek === 1) {
+        $("#mondayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
+      } else if (takeoutDayofWeek === 2) {
+        $("#tuesdayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
+      } else if (takeoutDayofWeek === 3) {
+        $("#wednesdayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
+      } else if (takeoutDayofWeek === 4) {
+        $("#thursdayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
+      } else if (takeoutDayofWeek === 5) {
+        $("#fridayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
+      } else if (takeoutDayofWeek === 6) {
+        $("#saturdayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
+      } else if (takeoutDayofWeek === 7) {
+        $("#sundayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
+      }
+
+  })
 });
