@@ -25,6 +25,41 @@ Carbon.prototype.carbonFootprint = function() {
   }
 }
 
+function Coffee(typeCup, count, hot, cold, sleeve, straw, total) {
+  this.typeCup = typeCup,
+  this.count = count,
+  this.hot = hot
+  this.cold = cold
+  this.sleeve = sleeve
+  this.straw = straw
+  this.total = total
+  this.totalAccessories = []
+}
+
+Coffee.prototype.noCup = function() {
+  return this.total = this.count * 100;
+}
+
+Coffee.prototype.ownCup = function() {
+  return this.total = this.count * 50;
+}
+Coffee.prototype.typeOfCofffee = function() {
+  this.hot = this.hot += 50
+  this.cold = this.cold += 50
+  this.sleeve = this.sleeve += 70
+  this.straw = this.straw += 80
+  this.totalAccessories.push(this.hot,this.cold,this.sleeve,this.straw);
+
+  return this.totalAccessories;
+}
+
+Coffee.prototype.totalCoffeeAccessories = function() {
+  for(var i = 0; this.totalAccessories.length; i++) {
+    this.total += this.totalAccessories[i];
+  }
+  return this.totalAccessories;
+}
+
 
 $(document).ready(function() {
   $(".inputForm").submit(function(event) {

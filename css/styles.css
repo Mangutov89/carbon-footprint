@@ -26,7 +26,7 @@ h2 {
   color: #31708f;
   font-family: 'Monoton', cursive;
 }
-#mileage, select {
+#cupsofcoffee, #mileage, select {
   width: 245px;
   border: 1px solid;
   border-radius: 4px;
