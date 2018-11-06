@@ -1,4 +1,8 @@
-var dailySum = [];
+function empty(list) {
+  console.log(list);
+    list = [];
+    console.log(list);
+  }
 
 function Carbon(transportation, mile, total) {
   this.transportation = transportation,
@@ -95,9 +99,6 @@ toGoContainers.prototype.totalCarbon = function() {
   return this.totalCarbonSum + " grams of CO2";
 }
 toGoContainers.prototype.totalCarbonforGraph = function() {
-  for (i = 0; i < this.totalTakeoutCarbonArray.length; i++) {
-    this.totalCarbonSum += this.totalTakeoutCarbonArray[i];
-  }
   return this.totalCarbonSum;
 }
 
@@ -234,7 +235,7 @@ $(document).ready(function() {
         data.rows.push(["Sunday", takeoutCarbon.totalCarbonforGraph()]);
       }
 
-      console.log(data);
+      console.log(takeoutCarbon.totalCarbonforGraph());
         // create the chart
 
 
@@ -250,7 +251,11 @@ $(document).ready(function() {
     // draw
     chart.container("graphId");
     chart.draw();
+    $(".modal").show();
+
+    $(".close").click(function() {
+      $(".modal").hide();
+      $("#graphId").empty()
   })
-
-
+  })
 });
