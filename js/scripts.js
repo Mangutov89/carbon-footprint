@@ -193,7 +193,7 @@ $(document).ready(function() {
     var takeoutCarbon = new toGoContainers(paperBag, plasticBag, recycledPaperBox, paperBox, bagasse, utensils, napkins);
 
     var takeoutDayofWeek = parseInt($(".takeoutSelectWeekday").val());
-    takeoutCarbon.arraySum();
+    takeoutCarbon.arraySum()   ;
 
       if (takeoutDayofWeek === 1) {
         $("#mondayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
