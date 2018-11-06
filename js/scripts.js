@@ -1,3 +1,5 @@
+var dailySum = [];
+
 function Carbon(transportation, mile, total) {
   this.transportation = transportation,
   this.mile = mile,
@@ -92,6 +94,12 @@ toGoContainers.prototype.totalCarbon = function() {
   }
   return this.totalCarbonSum + " grams of CO2";
 }
+toGoContainers.prototype.totalCarbonforGraph = function() {
+  for (i = 0; i < this.totalTakeoutCarbonArray.length; i++) {
+    this.totalCarbonSum += this.totalTakeoutCarbonArray[i];
+  }
+  return this.totalCarbonSum;
+}
 
 
 
@@ -103,11 +111,10 @@ $(document).ready(function() {
     var inputMile = parseInt($("#mileage").val());
     var transportation = $("input:radio[name=transportation]:checked").val();
 
-
     var dailyCarbon = new Carbon(transportation, inputMile);
-    console.log(dayOfWeek, inputMile, transportation);
 
-    console.log(dailyCarbon.total);
+
+    dailySum.push()
 
     if (transportation === "4") {
       if(dayOfWeek === "1") {
@@ -197,21 +204,48 @@ $(document).ready(function() {
     var takeoutDayofWeek = parseInt($(".takeoutSelectWeekday").val());
     takeoutCarbon.arraySum();
 
+    var data = {
+      header: ["takeout", "Amount CO2"],
+      rows:[]
+    }
+
       if (takeoutDayofWeek === 1) {
         $("#mondayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
+        data.rows.push(["Monday", takeoutCarbon.totalCarbonforGraph()]);
       } else if (takeoutDayofWeek === 2) {
         $("#tuesdayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
+        data.rows.push(["Tuesday", takeoutCarbon.totalCarbonforGraph()]);
       } else if (takeoutDayofWeek === 3) {
         $("#wednesdayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
+        data.rows.push(["Wednesday", takeoutCarbon.totalCarbonforGraph()]);
       } else if (takeoutDayofWeek === 4) {
         $("#thursdayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
+        data.rows.push(["Thursday", takeoutCarbon.totalCarbonforGraph()]);
       } else if (takeoutDayofWeek === 5) {
         $("#fridayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
+        data.rows.push(["Friday", takeoutCarbon.totalCarbonforGraph()]);
       } else if (takeoutDayofWeek === 6) {
         $("#saturdayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
+        data.rows.push(["Saturday", takeoutCarbon.totalCarbonforGraph()]);
       } else if (takeoutDayofWeek === 7) {
         $("#sundayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
+        data.rows.push(["Sunday", takeoutCarbon.totalCarbonforGraph()]);
       }
 
+      console.log(data);
+        // create the chart
+        var chart = anychart.column();
+
+        // add data
+        chart.data(data);
+
+        // set the chart title
+        chart.title("Take Out Waste Grams CO2");
+
+        // draw
+        chart.container("graphId");
+        chart.draw();
   })
+
+
 });
