@@ -12,14 +12,14 @@ body {
 }
 h1 {
   font-size: 75px;
-font-family: 'Gruppo', cursive;
-text-align: center;
+  font-family: 'Gruppo', cursive;
+  text-align: center;
 }
 
 .col-md-3 {
-border: 1px solid;
-border-radius: 4px;
-height: 250px;
+  border: 1px solid;
+  border-radius: 4px;
+  height: 250px;
 }
 h2 {
   text-align: center;
