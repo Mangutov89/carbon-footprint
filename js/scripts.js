@@ -105,6 +105,11 @@ toGoContainers.prototype.totalCarbonforGraph = function() {
 
 
 $(document).ready(function() {
+  var data = {
+    header: ["takeout", "Amount CO2"],
+    rows:[]
+  };
+
   $(".inputForm").submit(function(event) {
     event.preventDefault();
     var dayOfWeek = $(".selectWeekday").val();
@@ -204,10 +209,7 @@ $(document).ready(function() {
     var takeoutDayofWeek = parseInt($(".takeoutSelectWeekday").val());
     takeoutCarbon.arraySum();
 
-    var data = {
-      header: ["takeout", "Amount CO2"],
-      rows:[]
-    }
+
 
       if (takeoutDayofWeek === 1) {
         $("#mondayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
@@ -234,17 +236,20 @@ $(document).ready(function() {
 
       console.log(data);
         // create the chart
-        var chart = anychart.column();
 
-        // add data
-        chart.data(data);
 
-        // set the chart title
-        chart.title("Take Out Waste Grams CO2");
+  })
+  $(".graph-button").click(function() {
+    var chart = anychart.column();
 
-        // draw
-        chart.container("graphId");
-        chart.draw();
+    chart.data(data);
+
+    // set the chart title
+    chart.title("Take Out Waste Grams CO2");
+
+    // draw
+    chart.container("graphId");
+    chart.draw();
   })
 
 
