@@ -106,10 +106,15 @@ toGoContainers.prototype.totalCarbonforGraph = function() {
 
 
 $(document).ready(function() {
-  var data = {
+  var takeOutData = {
     header: ["takeout", "Amount CO2"],
-    rows:[]
+    rows:[],
   };
+  var transitData = {
+    header: ["takeout", "Amount CO2"],
+    rows:[],
+  };
+
 
   $(".inputForm").submit(function(event) {
     event.preventDefault();
@@ -120,78 +125,100 @@ $(document).ready(function() {
     var dailyCarbon = new Carbon(transportation, inputMile);
 
 
-    dailySum.push()
+    // dailySum.push()
 
     if (transportation === "4") {
       if(dayOfWeek === "1") {
         $("#mondayCommuteFootprint").text(dailyCarbon.calculateCar() + " grams of CO2 per passenger per mile");
         $("#mondayCommute").text("Car");
+        transitData.rows.push(["Monday", dailyCarbon.calculateCar()]);
+        console.log(takeOutData.rows);
       } else if(dayOfWeek === "2") {
         $("#tuesdayCommuteFootprint").text(dailyCarbon.calculateCar() + " grams of CO2 per passenger per mile");
         $("#tuesdayCommute").text("Car");
+        transitData.rows.push(["Tuesday", dailyCarbon.calculateCar()]);
       } else if(dayOfWeek === "3") {
         $("#wednesdayCommuteFootprint").text(dailyCarbon.calculateCar() + " grams of CO2 per passenger per mile");
         $("#wednesdayCommute").text("Car");
+        transitData.rows.push(["Wednesday", dailyCarbon.calculateCar()]);
       } else if (dayOfWeek === "4"){
         $("#thursdayCommuteFootprint").text(dailyCarbon.calculateCar() + " grams of CO2 per passenger per mile");
         $("#thursdayCommute").text("Car");
+        transitData.rows.push(["Thursday", dailyCarbon.calculateCar()]);
       } else if (dayOfWeek === "5"){
         $("#fridayCommuteFootprint").text(dailyCarbon.calculateCar() + " grams of CO2 per passenger per mile");
         $("#fridayCommute").text("Car");
+        transitData.rows.push(["Friday", dailyCarbon.calculateCar()]);
       } else if (dayOfWeek === "6"){
         $("#saturdayCommuteFootprint").text(dailyCarbon.calculateCar() + " grams of CO2 per passenger per mile");
         $("#saturdayCommute").text("Car");
+        transitData.rows.push(["Saturday", dailyCarbon.calculateCar()]);
       } else if (dayOfWeek === "7"){
         $("#sundayCommuteFootprint").text(dailyCarbon.calculateCar() + " grams of CO2 per passenger per mile");
         $("#sundayCommute").text("Car");
+        transitData.rows.push(["Sunday", dailyCarbon.calculateCar()]);
       }
     }
     if (transportation === "3") {
       if(dayOfWeek === "1") {
         $("#mondayCommuteFootprint").text(dailyCarbon.calculateBus() + " grams of CO2 per passenger per mile");
         $("#mondayCommute").text("Bus");
+        transitData.rows.push(["Monday", dailyCarbon.calculateBus()]);
       } else if(dayOfWeek === "2") {
         $("#tuesdayCommuteFootprint").text(dailyCarbon.calculateBus() + " grams of CO2 per passenger per mile");
         $("#tuesdayCommute").text("Bus");
+          transitData.rows.push(["Tuesday", dailyCarbon.calculateBus()]);
       } else if(dayOfWeek === "3") {
         $("#wednesdayCommuteFootprint").text(dailyCarbon.calculateBus() + " grams of CO2 per passenger per mile");
         $("#wednesdayCommute").text("Bus");
+          transitData.rows.push(["Wednesday", dailyCarbon.calculateBus()]);
       } else if (dayOfWeek === "4"){
         $("#thursdayCommuteFootprint").text(dailyCarbon.calculateBus() + " grams of CO2 per passenger per mile");
         $("#thursdayCommute").text("Bus");
+          transitData.rows.push(["Thursday", dailyCarbon.calculateBus()]);
       } else if (dayOfWeek === "5"){
         $("#fridayCommuteFootprint").text(dailyCarbon.calculateBus() + " grams of CO2 per passenger per mile");
         $("#fridayCommute").text("Bus");
+          transitData.rows.push(["Friday", dailyCarbon.calculateBus()]);
       } else if (dayOfWeek === "6"){
         $("#saturdayCommuteFootprint").text(dailyCarbon.calculateBus() + " grams of CO2 per passenger per mile");
         $("#saturdayCommute").text("Bus");
+          transitData.rows.push(["Saturday", dailyCarbon.calculateBus()]);
       } else if (dayOfWeek === "7"){
         $("#sundayCommuteFootprint").text(dailyCarbon.calculateBus() + " grams of CO2 per passenger per mile");
         $("#sundayCommute").text("Bus");
+          transitData.rows.push(["Sunday", dailyCarbon.calculateBus()]);
       }
     }
     if (transportation === "2") {
       if(dayOfWeek === "1") {
         $("#mondayCommuteFootprint").text(dailyCarbon.calculateBike() + " grams of CO2 per passenger per mile");
         $("#mondayCommute").text("Bike/Walk");
+          transitData.rows.push(["Monday", dailyCarbon.calculateBike()]);
       } else if(dayOfWeek === "2") {
         $("#tuesdayCommuteFootprint").text(dailyCarbon.calculateBike() + " grams of CO2 per passenger per mile");
         $("#tuesdayCommute").text("Bike/Walk");
+        transitData.rows.push(["Tuesday", dailyCarbon.calculateBike()]);
       } else if(dayOfWeek === "3") {
         $("#wednesdayCommuteFootprint").text(dailyCarbon.calculateBike() + " grams of CO2 per passenger per mile");
         $("#wednesdayCommute").text("Bike/Walk");
+        transitData.rows.push(["Wednesday", dailyCarbon.calculateBike()]);
       } else if (dayOfWeek === "4"){
         $("#thursdayCommuteFootprint").text(dailyCarbon.calculateBike() + " grams of CO2 per passenger per mile");
         $("#thursdayCommute").text("Bike/Walk");
+        transitData.rows.push(["Thursday", dailyCarbon.calculateBike()]);
       } else if (dayOfWeek === "5"){
         $("#fridayCommuteFootprint").text(dailyCarbon.calculateBike() + " grams of CO2 per passenger per mile");
         $("#fridayCommute").text("Bike/Walk");
+        transitData.rows.push(["Friday", dailyCarbon.calculateBike()]);
       } else if (dayOfWeek === "6"){
         $("#saturdayCommuteFootprint").text(dailyCarbon.calculateBike() + " grams of CO2 per passenger per mile");
         $("#saturdayCommute").text("Bike/Walk");
+        transitData.rows.push(["Saturday", dailyCarbon.calculateBike()]);
       } else if (dayOfWeek === "7"){
         $("#sundayCommuteFootprint").text(dailyCarbon.calculateBike() + " grams of CO2 per passenger per mile");
         $("#sundayCommute").text("Bike/Walk");
+          transitData.rows.push(["Sunday", dailyCarbon.calculateBike()]);
       }
     }
   });
@@ -214,48 +241,62 @@ $(document).ready(function() {
 
       if (takeoutDayofWeek === 1) {
         $("#mondayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
-        data.rows.push(["Monday", takeoutCarbon.totalCarbonforGraph()]);
+        takeOutData.rows.push(["Takeout - Monday", takeoutCarbon.totalCarbonforGraph()]);
       } else if (takeoutDayofWeek === 2) {
         $("#tuesdayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
-        data.rows.push(["Tuesday", takeoutCarbon.totalCarbonforGraph()]);
+        takeOutData.rows.push(["Tuesday", takeoutCarbon.totalCarbonforGraph()]);
       } else if (takeoutDayofWeek === 3) {
         $("#wednesdayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
-        data.rows.push(["Wednesday", takeoutCarbon.totalCarbonforGraph()]);
+        takeOutData.rows.push(["Wednesday", takeoutCarbon.totalCarbonforGraph()]);
       } else if (takeoutDayofWeek === 4) {
         $("#thursdayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
-        data.rows.push(["Thursday", takeoutCarbon.totalCarbonforGraph()]);
+        takeOutData.rows.push(["Thursday", takeoutCarbon.totalCarbonforGraph()]);
       } else if (takeoutDayofWeek === 5) {
         $("#fridayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
-        data.rows.push(["Friday", takeoutCarbon.totalCarbonforGraph()]);
+        takeOutData.rows.push(["Friday", takeoutCarbon.totalCarbonforGraph()]);
       } else if (takeoutDayofWeek === 6) {
         $("#saturdayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
-        data.rows.push(["Saturday", takeoutCarbon.totalCarbonforGraph()]);
+        takeOutData.rows.push(["Saturday", takeoutCarbon.totalCarbonforGraph()]);
       } else if (takeoutDayofWeek === 7) {
         $("#sundayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
-        data.rows.push(["Sunday", takeoutCarbon.totalCarbonforGraph()]);
+        takeOutData.rows.push(["Sunday", takeoutCarbon.totalCarbonforGraph()]);
       }
 
-      console.log(takeoutCarbon.totalCarbonforGraph());
-        // create the chart
-
-
   })
-  $(".graph-button").click(function() {
+  $(".takeoutGraph-button").click(function() {
     var chart = anychart.column();
 
-    chart.data(data);
+    chart.data(takeOutData);
 
     // set the chart title
-    chart.title("Take Out Waste Grams CO2");
+    chart.title("Takeout Footprint in Grams of CO2");
 
     // draw
-    chart.container("graphId");
+    chart.container("takeoutGraphId");
     chart.draw();
-    $(".modal").show();
+    $(".takeoutModal").show();
 
     $(".close").click(function() {
-      $(".modal").hide();
-      $("#graphId").empty()
+      $(".takeoutModal").hide();
+      $("#takeoutGraphId").empty()
   })
+  })
+  $(".transitGraph-button").click(function() {
+    var chart = anychart.column();
+
+    chart.data(transitData);
+
+    // set the chart title
+    chart.title("Transit Footprint in Grams of CO2");
+
+    // draw
+    chart.container("transitGraphId");
+    chart.draw();
+    $(".transitModal").show();
+
+    $(".close").click(function() {
+      $(".transitModal").hide();
+      $("#transitGraphId").empty()
+    })
   })
 });

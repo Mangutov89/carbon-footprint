@@ -224,6 +224,8 @@
       </form>
 
 
+
+
     </div>
 
 
@@ -258,32 +260,46 @@
           </div>
         </div>
       </div>
+      <button type="button" class="btn btn-info transitGraph-button">Transit Emissions Graph</button>
+      <button type="button" class="btn btn-info takeoutGraph-button">Takeout Emissions Graph</button>
     </div>
 
-    <button type="button" class="graph-button">graph</button>
 
 
 
 
-
-    <div class="modal" tabindex="-1" role="dialog">
+    <div class="modal takeoutModal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title">Takeout Emissions <span class="userName"></span>!</h5>
+                  <h2 class="modal-title">Takeout Emissions</h2>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <div class="modal-body">
-                  <div id="graphId"></div>
+                  <div id="takeoutGraphId"></div>
                 </div>
               </div>
             </div>
           </div>
 
 
-
+          <div class="modal transitModal" tabindex="-1" role="dialog">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h2 class="modal-title">Transit Emissions</h2>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <div id="transitGraphId"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
 
 
