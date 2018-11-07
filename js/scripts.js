@@ -305,6 +305,9 @@ $(document).ready(function() {
   $(".takeoutGraph-button").click(function() {
     var chart = anychart.column();
 
+    var dataColor = chart.column(takeOutData);
+    dataColor.normal().fill("#86BBD8", 1);
+    dataColor.normal().stroke("#86BBD8", null);
     chart.data(takeOutData);
 
     // set the chart title
@@ -323,6 +326,10 @@ $(document).ready(function() {
   $(".transitGraph-button").click(function() {
     var chart = anychart.column();
 
+    var dataColor2 = chart.column(transitData);
+    dataColor2.normal().fill("#2F4858", 1);
+    dataColor2.normal().stroke("#2F4858", null);
+
     chart.data(transitData);
 
     // set the chart title
@@ -340,6 +347,10 @@ $(document).ready(function() {
   })
   $(".coffeeGraph-button").click(function() {
     var chart = anychart.column();
+
+    var dataColor3 = chart.column(coffeeData);
+    dataColor3.normal().fill("#9EE493", 1);
+    dataColor3.normal().stroke("#9EE493", null);
 
     chart.data(coffeeData);
 
