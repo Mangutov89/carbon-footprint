@@ -114,16 +114,19 @@ $(document).ready(function() {
   };
 
     $(".transitNav").click(function(){
+      $(".mainDisplayDiv").hide();
       $(".inputForm").show();
       $(".takeoutForm").hide();
       $(".coffeeForm").hide();
     })
     $(".takeoutNav").click(function(){
+      $(".mainDisplayDiv").hide();
       $(".takeoutForm").show();
       $(".inputForm").hide();
       $(".coffeeForm").hide();
     })
     $(".coffeeNav").click(function(){
+      $(".mainDisplayDiv").hide();
       $(".coffeeForm").show();
       $(".takeoutForm").hide();
       $(".inputForm").hide();
@@ -384,13 +387,23 @@ $(document).ready(function() {
     })
   })
 
-  $(".h4Click").click(function() {
-    $(".suggestList").toggle();
+  $(".suggestClick").click(function() {
+    $(".suggestList").show();
+    $(".reduceEmissionsList").hide();
+    $(".differentCommuteList").hide();
     $(".suggestList").addClass("factsAddClass");
-
-  // $(".h4").click(function() {
-  //   $(".this").hide();
-    // });
   });
+  $(".reduceClick").click(function() {
+    $(".reduceEmissionsList").show();
+    $(".suggestList").hide();
+    $(".differentCommuteList").hide();
+    $(".reduceEmissionsList").addClass("factsAddClass");
+});
+$(".linkClick").click(function() {
+  $(".differentCommuteList").show();
+  $(".suggestList").hide();
+  $(".reduceEmissionsList").hide();
+  $(".differentCommuteList").addClass("factsAddClass");
+});
 
 });

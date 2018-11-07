@@ -9,7 +9,7 @@ body {
   margin: 100px;
 }
 
-.inputForm, .coffeeForm, .takeoutForm, .suggestList {
+.inputForm, .coffeeForm, .takeoutForm, .suggestList, .reduceEmissionsList, .differentCommuteList {
   display: none;
 }
 .container {
@@ -70,7 +70,16 @@ select, input {
   margin: 0;
   padding: 0;
 }
-
+.mainDisplayDiv {
+  text-align: center;
+}
+.displayText {
+  font-size: 50px;
+  font-family: monospace;
+}
+a {
+  font-family: monospace;
+}
 
 .sideBaring {
   float: left;
@@ -79,7 +88,7 @@ select, input {
   padding: 10px;
   background: none;
   text-align: center;
-  margin-left: 70px;
+  margin-left: 150px;
   margin-right: -100px;
 }
 
@@ -118,4 +127,5 @@ footer {
   opacity: .9;
   border-radius: 4px;
   border: 1px solid;
+  min-height: 100px;
 }
