@@ -126,7 +126,7 @@ $(document).ready(function() {
     $(".coffeeNav").click(function(){
       $(".coffeeForm").show();
       $(".takeoutForm").hide();
-      $(".takeoutForm").hide();
+      $(".inputForm").hide();
     })
 
 
@@ -383,9 +383,11 @@ $(document).ready(function() {
       $("#coffeeGraphId").empty()
     })
   })
-  $(".suggestList").hide();
+
   $(".h4Click").click(function() {
     $(".suggestList").toggle();
+    $(".suggestList").addClass("factsAddClass");
+
   // $(".h4").click(function() {
   //   $(".this").hide();
     // });

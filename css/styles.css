@@ -4,14 +4,19 @@ body {
   background-size: cover;
   height: 100%;
 }
-.inputForm, .coffeeForm, .takeoutForm {
+
+#emptyDiv {
+  margin: 100px;
+}
+
+.inputForm, .coffeeForm, .takeoutForm, .suggestList {
   display: none;
 }
+
 .container {
-  margin-top: 50px;
-  /* background-color: white;
-  opacity: .9; */
+  width: 65%;
 }
+
 h1 {
   font-size: 75px;
   font-family: 'Gruppo', cursive;
@@ -24,11 +29,31 @@ h2 {
   color: #31708f;
   font-family: 'Monoton', cursive;
 }
+
+.btn {
+  margin-bottom: 10px;
+  color: black;
+}
+
+.buttonsDiv {
+  text-align: center;
+}
+
 .modal-title {
   font-size: 35px;
   font-family: 'Gruppo', cursive;
   text-align: center;
   font-weight: bold;
+}
+
+#cupsofcoffee, #mileage, select {
+  width: 245px;
+  border: 1px solid;
+  border-radius: 4px;
+}
+
+select, input {
+  margin-bottom: 10px;
 }
 
 .something {
@@ -38,14 +63,6 @@ h2 {
   background-color: white;
   opacity: .9;
 }
-#cupsofcoffee, #mileage, select {
-  width: 245px;
-  border: 1px solid;
-  border-radius: 4px;
-}
-select, input {
-  margin-bottom: 10px;
-}
 
 #graphId {
   width: 100%;
@@ -54,13 +71,19 @@ select, input {
   padding: 0;
 }
 
-.suggestions .col-md-6 {
-  height: 300px;
+.sideBaring {
+  float: left;
+  width: 270px;
+  height: 400px;
+  padding: 5px;
+  background: none;
+}
+
+.suggestions{
   border: none;
   margin-top: 20px;
   background-color: none;
-  color: white;
-
+  color: black;
 }
 
 .suggestions h4:hover {
@@ -70,10 +93,11 @@ select, input {
   cursor: context-menu;
 }
 
-.sideBaring {
-  float: left;
-  width: 270px;
-  padding: 5px;
-  background: none;
-
+.factsAddClass {
+  border: none;
+  margin-top: 20px;
+  background-color: white;
+  opacity: .9;
+  border-radius: 4px;
+  border: 1px solid;
 }

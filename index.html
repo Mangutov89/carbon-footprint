@@ -13,165 +13,163 @@
   <body>
     <h1>Carbon Footprint Count</h1>
     <h2>Coffee - Commute - Cuisine</h2>
-<div class="container">
-    <div class="sideBaring">
-      <ul class="nav nav-tabs">
-        <li class="nav-item">
-          <a class="nav-link nav-tabs transitNav" href="#">Commute</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-tabs takeoutNav" href="#">Cuisine</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-tabs coffeeNav" href="#">Coffee</a>
-        </li>
-      </ul>
-<div class="row">
+    <div class="container">
+      <!-- nav  -->
+      <div class="sideBaring">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link nav-tabs coffeeNav" href="#">Coffee</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-tabs transitNav" href="#">Commute</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-tabs takeoutNav" href="#">Cuisine</a>
+          </li>
+        </ul>
+        <!-- end of nav -->
 
-</div>
-    <form class="row inputForm">
-      <p>Select day of the week to track:</p>
-      <select class="selectWeekday" name="">
-        <option value="1">Monday</option>
-        <option value="2">Tuesday</option>
-        <option value="3">Wednesday</option>
-        <option value="4">Thursday</option>
-        <option value="5">Friday</option>
-        <option value="6">Saturday</option>
-        <option value="7">Sunday</option>
-      </select><br>
-      <input type="number" id="mileage" name="commute" placeholder="How many miles is your commute?">
-      <p>How did you commute today?</p>
-      <input type="radio" name="transportation" value="4" id="car">
-      <label for="car">Car</label><br>
-      <input type="radio" name="transportation" value="3" id="transit">
-      <label for="transit">Public Transit</label><br>
-      <input type="radio" name="transportation" value="2" id="bike">
-      <label for="bike">Walk or bike</label><br>
-      <input type="radio" name="transportation" value="1" id="carPool">
-      <label for="carPool">Carpool</label><br>
-      <button type="submit" name="button" class="btn btn-info">Calculate My Footprint!</button>
-    </form>
+        <!-- forms -->
+        <form class="row inputForm">
+          <p>Select day of the week to track:</p>
+          <select class="selectWeekday" name="">
+            <option value="1">Monday</option>
+            <option value="2">Tuesday</option>
+            <option value="3">Wednesday</option>
+            <option value="4">Thursday</option>
+            <option value="5">Friday</option>
+            <option value="6">Saturday</option>
+            <option value="7">Sunday</option>
+          </select><br>
+          <input type="number" id="mileage" name="commute" placeholder="How many miles is your commute?">
+          <p>How did you commute today?</p>
+          <input type="radio" name="transportation" value="4" id="car">
+          <label for="car">Car</label><br>
+          <input type="radio" name="transportation" value="3" id="transit">
+          <label for="transit">Public Transit</label><br>
+          <input type="radio" name="transportation" value="2" id="bike">
+          <label for="bike">Walk or bike</label><br>
+          <input type="radio" name="transportation" value="1" id="carPool">
+          <label for="carPool">Carpool</label><br>
+          <button type="submit" name="button" class="btn btn-info">Calculate My Footprint!</button>
+        </form>
+        <form class="row takeoutForm">
+          <p>Select day of the week to track:</p>
+          <select class="takeoutSelectWeekday">
+            <option value="1">Monday</option>
+            <option value="2">Tuesday</option>
+            <option value="3">Wednesday</option>
+            <option value="4">Thursday</option>
+            <option value="5">Friday</option>
+            <option value="6">Saturday</option>
+            <option value="7">Sunday</option>
+          </select><br>
+          <p>Did you have takeout today?</p>
 
-    <form class="row takeoutForm">
-      <p>Select day of the week to track:</p>
-      <select class="takeoutSelectWeekday" name="">
-        <option value="1">Monday</option>
-        <option value="2">Tuesday</option>
-        <option value="3">Wednesday</option>
-        <option value="4">Thursday</option>
-        <option value="5">Friday</option>
-        <option value="6">Saturday</option>
-        <option value="7">Sunday</option>
-      </select><br>
-      <p>Did you have takeout today?</p>
-
-      <select class="paperBag">
-        <option value="0">Paper Bag</option>
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-      </select>
-      <select class="plasticBag">
-        <option value="0">Plastic Bag</option>
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-      </select>
-      <select class="recycledPaperBox">
-        <option value="0">Recyclced Paper Box</option>
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-      </select>
-      <select class="paperBox">
-        <option value="0">Paper Box</option>
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-      </select>
-      <select class="bagasse">
-        <option value="0">Bagasse (pulp box)</option>
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-      </select>
-      <select class="utensils">
-        <option value="0">Utensils</option>
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-      </select>
-      <select class="napkins">
-        <option value="0">Napkins</option>
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-      </select><br>
-
-
-      <button type="submit" class="btn btn-info">Submit</button>
-    </form>
-
-    <form class="row coffeeForm">
-      <h3>Coffee Choices:</h3>
-      <select class="coffeeselectweekday" name="">
-        <option value="1">Monday</option>
-        <option value="2">Tuesday</option>
-        <option value="3">Wednesday</option>
-        <option value="4">Thursday</option>
-        <option value="5">Friday</option>
-        <option value="6">Saturday</option>
-        <option value="7">Sunday</option>
-      </select>
-      <select class="typeofcup" name="">
-        <option value="0">Did you bring your own cup?</option>
-        <option value="0">No</option>
-        <option value="1">Yes</option>
-      </select>
-      <input type="number" id="cupsofcoffee" name="coffee" placeholder="How many cups would you like?"><br>
-      <select class="sleeve">
-        <option value="0">Sleeve</option>
-        <option value="0">No</option>
-        <option value="1">Yes</option>
-      </select>
-      <select class="straw">
-        <option value="0">Straw</option>
-        <option value="0">No</option>
-        <option value="1">Yes</option>
-      </select><br>
+          <select class="paperBag">
+            <option value="0">Paper Bag</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+          <select class="plasticBag">
+            <option value="0">Plastic Bag</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+          <select class="recycledPaperBox">
+            <option value="0">Recyclced Paper Box</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+          <select class="paperBox">
+            <option value="0">Paper Box</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+          <select class="bagasse">
+            <option value="0">Bagasse (pulp box)</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+          <select class="utensils">
+            <option value="0">Utensils</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+          <select class="napkins">
+            <option value="0">Napkins</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select><br>
 
 
+          <button type="submit" class="btn btn-info">Submit</button>
+        </form>
+        <form class="row coffeeForm">
+          <h3>Coffee Choices:</h3>
+          <select class="coffeeselectweekday">
+            <option value="1">Monday</option>
+            <option value="2">Tuesday</option>
+            <option value="3">Wednesday</option>
+            <option value="4">Thursday</option>
+            <option value="5">Friday</option>
+            <option value="6">Saturday</option>
+            <option value="7">Sunday</option>
+          </select>
+          <select class="typeofcup" name="">
+            <option value="0">Did you bring your own cup?</option>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+          <input type="number" id="cupsofcoffee" name="coffee" placeholder="How many cups would you like?"><br>
+          <select class="sleeve">
+            <option value="0">Sleeve</option>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+          <select class="straw">
+            <option value="0">Straw</option>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select><br>
+          <button type="submit" name="button" class="btn btn-info">Calculate My Footprint!</button>
+        </form>
+      </div>
+      <!-- end of forms -->
 
-    <button type="submit" name="button" class="btn btn-info">Calculate My Footprint!</button>
-  </form>
-
-</div>
 
 
+      <!-- 7 day calendar  -->
       <div class="row">
-        <div class="col-md-3 something" id="day1">
+        <div class="col-md-2 something" id="day1">
           <h2>Monday</h2>
           <div class="mondayTracker">
             <p>Traveled by: <span id="mondayCommute"></span></p>
@@ -181,7 +179,7 @@
             <p>Total Daily Carbon Footprint: <span id="mondayDailyFootprint"></span></p>
           </div>
         </div>
-        <div class="col-md-3 something" id="day2">
+        <div class="col-md-2 something" id="day2">
           <h2>Tuesday</h2>
           <div class="tuesdayTracker">
             <p>Traveled by: <span id="tuesdayCommute"></span></p>
@@ -191,7 +189,7 @@
             <p>Total Daily Carbon Footprint: <span id="tuesdayDailyFootprint"></span></p>
           </div>
         </div>
-        <div class="col-md-3 something"  id="day3">
+        <div class="col-md-2 something"  id="day3">
           <h2>Wednesday</h2>
           <div class="wednesdayTracker">
             <p>Traveled by: <span id="wednesdayCommute"></span></p>
@@ -201,7 +199,7 @@
             <p>Total Daily Carbon Footprint: <span id="wednesdayDailyFootprint"></span></p>
           </div>
         </div>
-        <div class="col-md-3 something"  id="day4">
+        <div class="col-md-2 something"  id="day4">
           <h2>Thursday</h2>
           <div class="thursdayTracker">
             <p>Traveled by: <span id="thursdayCommute"></span></p>
@@ -211,9 +209,7 @@
             <p>Total Daily Carbon Footprint: <span id="thursdayDailyFootprint"></span></p>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-3 something" id="day5">
+        <div class="col-md-2 something" id="day5">
           <h2>Friday</h2>
           <div class="fridayTracker">
             <p>Traveled by: <span id="fridayCommute"></span></p>
@@ -223,7 +219,7 @@
             <p>Total Daily Carbon Footprint: <span id="fridayDailyFootprint"></span></p>
           </div>
         </div>
-        <div class="col-md-3 something" id="day6">
+        <div class="col-md-2 something" id="day6">
           <h2>Saturday</h2>
           <div class="saturdayTracker">
             <p>Traveled by: <span id="saturdayCommute"></span></p>
@@ -233,7 +229,7 @@
             <p>Total Daily Carbon Footprint: <span id="saturdayDailyFootprint"></span></p>
           </div>
         </div>
-        <div class="col-md-3 something"  id="day7">
+        <div class="col-md-2 something"  id="day7">
           <h2>Sunday</h2>
           <div class="sundayTracker">
             <p>Traveled by: <span id="sundayCommute"></span></p>
@@ -243,101 +239,92 @@
             <p>Total Daily Carbon Footprint: <span id="sundayDailyFootprint"></span></p>
           </div>
         </div>
-        <div class="col-md-3 something"  id="weekSummary">
+        <div class="col-md-2 something"  id="weekSummary">
           <h2>Summary</h2>
           <div class="summaryTracker">
             <p>Your weekly average commute footprint:</p>
           </div>
         </div>
       </div>
+      <!-- end of 7 day calendar -->
 
 
 
+      <div id="emptyDiv">
+      </div>
 
-
-
-
-
-
-
-
-
+    </div>
+    <!-- suggestion -->
+    <div class="container">
       <div class="suggestions">
-        <div class="row">
-          <div class="col-md-6 suggestTest">
-            <h4 class="h4Click">General Commute Statistics</h4>
-            <ul class="suggestList">
-              <li>Transportation accounts for 29% of greenhouse gas emissions in the U.S.</li>
-              <li>Subways and metros produce on average 76% lower greenhouse gas emissions than an *SOV/ppm</li>
-              <li>Riding a light rail train produces 62% less than an *SOV/ppm</li>
-              <li>Riding the bus produces 33% less than an *SOV/ppm</li>
-              <li>*SOV: single-occupancy vehicle; ppm : per passenger mile;  </li>
-            </ul>
-
-
-          </div>
-
+        <div class="suggestTest col-md-6">
+          <h4 class="h4Click">General Commute Statistics</h4>
+          <ul class="suggestList">
+            <li>Transportation accounts for 29% of greenhouse gas emissions in the U.S.</li>
+            <li>Subways and metros produce on average 76% lower greenhouse gas emissions than an *SOV/ppm</li>
+            <li>Riding a light rail train produces 62% less than an *SOV/ppm</li>
+            <li>Riding the bus produces 33% less than an *SOV/ppm</li>
+            <li>*SOV: single-occupancy vehicle; ppm : per passenger mile;  </li>
+          </ul>
         </div>
       </div>
-      <button type="button" class="btn btn-info transitGraph-button">Commute Emissions Graph</button>
-      <button type="button" class="btn btn-info takeoutGraph-button">Cuisine Takeout Emissions Graph</button>
+
+      <!-- end suggestions -->
+
+      <div class="col-md-6 buttonsDiv">
+        <!-- graphs -->
+        <button type="button" class="btn btn-info transitGraph-button">Commute Emissions Graph</button><br>
+        <button type="button" class="btn btn-info takeoutGraph-button">Cuisine Takeout Emissions Graph</button><br>
         <button type="button" class="btn btn-info coffeeGraph-button">Coffee Emissions Graph</button>
+        <!-- end of graphs -->
+      </div>
     </div>
-
-
-
-
-
+    <!--modals  -->
     <div class="modal takeoutModal" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h2 class="modal-title">Cuisine - Takeout - Emissions</h2>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <div id="takeoutGraphId"></div>
-                </div>
-              </div>
-            </div>
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">Cuisine - Takeout - Emissions</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
-
-
-          <div class="modal transitModal" tabindex="-1" role="dialog">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h2 class="modal-title">Commute - Emissions</h2>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        <div id="transitGraphId"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="modal coffeeModal" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h2 class="modal-title">Coffee - Emissions</h2>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                            </div>
-                            <div class="modal-body">
-                              <div id="coffeeGraphId"></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-
-
+          <div class="modal-body">
+            <div id="takeoutGraphId"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal transitModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">Commute - Emissions</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id="transitGraphId"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal coffeeModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">Coffee - Emissions</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id="coffeeGraphId"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modals -->
   </body>
 </html>
