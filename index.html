@@ -13,21 +13,21 @@
   <body>
     <h1>Carbon Footprint Count</h1>
     <h2>Coffee - Commute - Cuisine</h2>
-    <div class="container">
-      <!-- nav  -->
-      <div class="sideBaring">
-        <ul class="nav nav-tabs">
-          <li class="nav-item">
-            <a class="nav-link nav-tabs coffeeNav" href="#">Coffee</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-tabs transitNav" href="#">Commute</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-tabs takeoutNav" href="#">Cuisine</a>
-          </li>
-        </ul>
-        <!-- end of nav -->
+    <!-- nav  -->
+    <div class="sideBaring">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link nav-tabs coffeeNav" href="#"><h4>Coffee</h4></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-tabs transitNav" href="#"><h4>Commute</h4></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-tabs takeoutNav" href="#"><h4>Cuisine</h4></a>
+        </li>
+      </ul>
+
+    <!-- end of nav -->
 
         <!-- forms -->
         <form class="row inputForm">
@@ -129,12 +129,12 @@
             <option value="4">4</option>
             <option value="5">5</option>
           </select><br>
-
-
           <button type="submit" class="btn btn-info">Submit</button>
         </form>
         <form class="row coffeeForm">
-          <h3>Coffee Choices:</h3>
+
+          <!-- <h3>Coffee Choices:</h3> -->
+          <p>Select day of the week to track</p>
           <select class="coffeeselectweekday">
             <option value="1">Monday</option>
             <option value="2">Tuesday</option>
@@ -143,7 +143,7 @@
             <option value="5">Friday</option>
             <option value="6">Saturday</option>
             <option value="7">Sunday</option>
-          </select>
+          </select><br>
           <select class="typeofcup" name="">
             <option value="0">Did you bring your own cup?</option>
             <option value="0">No</option>
@@ -165,11 +165,10 @@
       </div>
       <!-- end of forms -->
 
-
-
+<div class="container">
       <!-- 7 day calendar  -->
       <div class="row">
-        <div class="col-md-2 something" id="day1">
+        <div class="col-md-3 dayColumns" id="day1">
           <h2>Monday</h2>
           <div class="mondayTracker">
             <p>Traveled by: <span id="mondayCommute"></span></p>
@@ -179,7 +178,7 @@
             <p>Total Daily Carbon Footprint: <span id="mondayDailyFootprint"></span></p>
           </div>
         </div>
-        <div class="col-md-2 something" id="day2">
+        <div class="col-md-3 dayColumns" id="day2">
           <h2>Tuesday</h2>
           <div class="tuesdayTracker">
             <p>Traveled by: <span id="tuesdayCommute"></span></p>
@@ -189,7 +188,7 @@
             <p>Total Daily Carbon Footprint: <span id="tuesdayDailyFootprint"></span></p>
           </div>
         </div>
-        <div class="col-md-2 something"  id="day3">
+        <div class="col-md-3 dayColumns"  id="day3">
           <h2>Wednesday</h2>
           <div class="wednesdayTracker">
             <p>Traveled by: <span id="wednesdayCommute"></span></p>
@@ -199,7 +198,7 @@
             <p>Total Daily Carbon Footprint: <span id="wednesdayDailyFootprint"></span></p>
           </div>
         </div>
-        <div class="col-md-2 something"  id="day4">
+        <div class="col-md-3 dayColumns"  id="day4">
           <h2>Thursday</h2>
           <div class="thursdayTracker">
             <p>Traveled by: <span id="thursdayCommute"></span></p>
@@ -209,7 +208,7 @@
             <p>Total Daily Carbon Footprint: <span id="thursdayDailyFootprint"></span></p>
           </div>
         </div>
-        <div class="col-md-2 something" id="day5">
+        <div class="col-md-3 dayColumns" id="day5">
           <h2>Friday</h2>
           <div class="fridayTracker">
             <p>Traveled by: <span id="fridayCommute"></span></p>
@@ -219,7 +218,7 @@
             <p>Total Daily Carbon Footprint: <span id="fridayDailyFootprint"></span></p>
           </div>
         </div>
-        <div class="col-md-2 something" id="day6">
+        <div class="col-md-3 dayColumns" id="day6">
           <h2>Saturday</h2>
           <div class="saturdayTracker">
             <p>Traveled by: <span id="saturdayCommute"></span></p>
@@ -229,7 +228,7 @@
             <p>Total Daily Carbon Footprint: <span id="saturdayDailyFootprint"></span></p>
           </div>
         </div>
-        <div class="col-md-2 something"  id="day7">
+        <div class="col-md-3 dayColumns"  id="day7">
           <h2>Sunday</h2>
           <div class="sundayTracker">
             <p>Traveled by: <span id="sundayCommute"></span></p>
@@ -239,7 +238,7 @@
             <p>Total Daily Carbon Footprint: <span id="sundayDailyFootprint"></span></p>
           </div>
         </div>
-        <div class="col-md-2 something"  id="weekSummary">
+        <div class="col-md-3 dayColumns"  id="weekSummary">
           <h2>Summary</h2>
           <div class="summaryTracker">
             <p>Your weekly average commute footprint:</p>
@@ -253,12 +252,18 @@
       <div id="emptyDiv">
       </div>
 
-    </div>
+
+
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link nav-tabs" href="#"><h4 class="h4Click">General Commute Statistics</h4></a>
+        </li>
+      </ul>
+
+
     <!-- suggestion -->
-    <div class="container">
       <div class="suggestions">
-        <div class="suggestTest col-md-6">
-          <h4 class="h4Click">General Commute Statistics</h4>
+        <div class="suggestTest">
           <ul class="suggestList">
             <li>Transportation accounts for 29% of greenhouse gas emissions in the U.S.</li>
             <li>Subways and metros produce on average 76% lower greenhouse gas emissions than an *SOV/ppm</li>
@@ -268,17 +273,8 @@
           </ul>
         </div>
       </div>
-
       <!-- end suggestions -->
-
-      <div class="col-md-6 buttonsDiv">
-        <!-- graphs -->
-        <button type="button" class="btn btn-info transitGraph-button">Commute Emissions Graph</button><br>
-        <button type="button" class="btn btn-info takeoutGraph-button">Cuisine Takeout Emissions Graph</button><br>
-        <button type="button" class="btn btn-info coffeeGraph-button">Coffee Emissions Graph</button>
-        <!-- end of graphs -->
-      </div>
-    </div>
+  </div>
     <!--modals  -->
     <div class="modal takeoutModal" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
@@ -326,5 +322,18 @@
       </div>
     </div>
     <!-- modals -->
+    <footer>
+      <ul class="nav nav-tabs nav-justified">
+        <li class="nav-item">
+          <a class="nav-link nav-tabs" href="#"><h4 class="transitGraph-button">Commute Emissions Graph</h4></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-tabs" href="#"><h4 class="takeoutGraph-button">Cuisine Emissions Graph</h4></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-tabs" href="#"><h4 class="coffeeGraph-button">Coffee Emissions Graph</h4></a>
+        </li>
+      </ul>
+</footer>
   </body>
 </html>

@@ -12,9 +12,9 @@ body {
 .inputForm, .coffeeForm, .takeoutForm, .suggestList {
   display: none;
 }
-
 .container {
   width: 65%;
+  overflow: hidden;
 }
 
 h1 {
@@ -56,7 +56,7 @@ select, input {
   margin-bottom: 10px;
 }
 
-.something {
+.dayColumns {
   border: 1px solid;
   border-radius: 4px;
   height: 250px;
@@ -71,12 +71,16 @@ select, input {
   padding: 0;
 }
 
+
 .sideBaring {
   float: left;
-  width: 270px;
+  width: 350px;
   height: 400px;
-  padding: 5px;
+  padding: 10px;
   background: none;
+  text-align: center;
+  margin-left: 70px;
+  margin-right: -100px;
 }
 
 .suggestions{
@@ -86,11 +90,25 @@ select, input {
   color: black;
 }
 
+h4 {
+  color: #2F4858;
+}
+
 .suggestions h4:hover {
   /* font-weight: bold; */
   color: #86BBD8;
   text-decoration: underline;
-  cursor: context-menu;
+  cursor: pointer;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  opacity: .7;
+  color: black;
 }
 
 .factsAddClass {
