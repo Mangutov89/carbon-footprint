@@ -13,7 +13,165 @@
   <body>
     <h1>Carbon Footprint Count</h1>
     <h2>Coffee - Commute - Cuisine</h2>
-    <div class="container">
+<div class="container">
+    <div class="sideBaring">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link nav-tabs transitNav" href="#">Commute</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-tabs takeoutNav" href="#">Cuisine</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-tabs coffeeNav" href="#">Coffee</a>
+        </li>
+      </ul>
+<div class="row">
+
+</div>
+    <form class="row inputForm">
+      <p>Select day of the week to track:</p>
+      <select class="selectWeekday" name="">
+        <option value="1">Monday</option>
+        <option value="2">Tuesday</option>
+        <option value="3">Wednesday</option>
+        <option value="4">Thursday</option>
+        <option value="5">Friday</option>
+        <option value="6">Saturday</option>
+        <option value="7">Sunday</option>
+      </select><br>
+      <input type="number" id="mileage" name="commute" placeholder="How many miles is your commute?">
+      <p>How did you commute today?</p>
+      <input type="radio" name="transportation" value="4" id="car">
+      <label for="car">Car</label><br>
+      <input type="radio" name="transportation" value="3" id="transit">
+      <label for="transit">Public Transit</label><br>
+      <input type="radio" name="transportation" value="2" id="bike">
+      <label for="bike">Walk or bike</label><br>
+      <input type="radio" name="transportation" value="1" id="carPool">
+      <label for="carPool">Carpool</label><br>
+      <button type="submit" name="button" class="btn btn-info">Calculate My Footprint!</button>
+    </form>
+
+    <form class="row takeoutForm">
+      <p>Select day of the week to track:</p>
+      <select class="takeoutSelectWeekday" name="">
+        <option value="1">Monday</option>
+        <option value="2">Tuesday</option>
+        <option value="3">Wednesday</option>
+        <option value="4">Thursday</option>
+        <option value="5">Friday</option>
+        <option value="6">Saturday</option>
+        <option value="7">Sunday</option>
+      </select><br>
+      <p>Did you have takeout today?</p>
+
+      <select class="paperBag">
+        <option value="0">Paper Bag</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <select class="plasticBag">
+        <option value="0">Plastic Bag</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <select class="recycledPaperBox">
+        <option value="0">Recyclced Paper Box</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <select class="paperBox">
+        <option value="0">Paper Box</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <select class="bagasse">
+        <option value="0">Bagasse (pulp box)</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <select class="utensils">
+        <option value="0">Utensils</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <select class="napkins">
+        <option value="0">Napkins</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select><br>
+
+
+      <button type="submit" class="btn btn-info">Submit</button>
+    </form>
+
+    <form class="row coffeeForm">
+      <h3>Coffee Choices:</h3>
+      <select class="coffeeselectweekday" name="">
+        <option value="1">Monday</option>
+        <option value="2">Tuesday</option>
+        <option value="3">Wednesday</option>
+        <option value="4">Thursday</option>
+        <option value="5">Friday</option>
+        <option value="6">Saturday</option>
+        <option value="7">Sunday</option>
+      </select>
+      <select class="typeofcup" name="">
+        <option value="0">Did you bring your own cup?</option>
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+      </select>
+      <input type="number" id="cupsofcoffee" name="coffee" placeholder="How many cups would you like?"><br>
+      <select class="sleeve">
+        <option value="0">Sleeve</option>
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+      </select>
+      <select class="straw">
+        <option value="0">Straw</option>
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+      </select><br>
+
+
+
+    <button type="submit" name="button" class="btn btn-info">Calculate My Footprint!</button>
+  </form>
+
+</div>
+
+
+<!--  end of sidebar-->
+
       <div class="row">
         <div class="col-md-3" id="day1">
           <h2>Monday</h2>
@@ -94,149 +252,11 @@
           </div>
         </div>
       </div>
-      <div class="row">
-      <form class="inputForm col-md-4" >
-        <p>Select day of the week to track:</p>
-        <select class="selectWeekday" name="">
-          <option value="1">Monday</option>
-          <option value="2">Tuesday</option>
-          <option value="3">Wednesday</option>
-          <option value="4">Thursday</option>
-          <option value="5">Friday</option>
-          <option value="6">Saturday</option>
-          <option value="7">Sunday</option>
-        </select><br>
-        <input type="number" id="mileage" name="commute" placeholder="How many miles is your commute?">
-        <p>How did you commute today?</p>
-        <input type="radio" name="transportation" value="4" id="car">
-        <label for="car">Car</label><br>
-        <input type="radio" name="transportation" value="3" id="transit">
-        <label for="transit">Public Transit</label><br>
-        <input type="radio" name="transportation" value="2" id="bike">
-        <label for="bike">Walk or bike</label><br>
-        <input type="radio" name="transportation" value="1" id="carPool">
-        <label for="carPool">Carpool</label><br>
-        <button type="submit" name="button" class="btn btn-info">Calculate My Footprint!</button>
-      </form>
-
-      <form class="takeoutForm col-md-4">
-        <p>Select day of the week to track:</p>
-        <select class="takeoutSelectWeekday" name="">
-          <option value="1">Monday</option>
-          <option value="2">Tuesday</option>
-          <option value="3">Wednesday</option>
-          <option value="4">Thursday</option>
-          <option value="5">Friday</option>
-          <option value="6">Saturday</option>
-          <option value="7">Sunday</option>
-        </select><br>
-        <p>Did you have takeout today?</p>
-
-        <select class="paperBag">
-          <option value="0">Paper Bag</option>
-          <option value="0">0</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-        <select class="plasticBag">
-          <option value="0">Plastic Bag</option>
-          <option value="0">0</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-        <select class="recycledPaperBox">
-          <option value="0">Recyclced Paper Box</option>
-          <option value="0">0</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-        <select class="paperBox">
-          <option value="0">Paper Box</option>
-          <option value="0">0</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-        <select class="bagasse">
-          <option value="0">Bagasse (pulp box)</option>
-          <option value="0">0</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-        <select class="utensils">
-          <option value="0">Utensils</option>
-          <option value="0">0</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-        <select class="napkins">
-          <option value="0">Napkins</option>
-          <option value="0">0</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select><br>
 
 
-        <button type="submit" class="btn btn-info">Submit</button>
-      </form>
-
-      <form class="coffeeForm col-md-4">
-        <h3>Coffee Choices:</h3>
-        <select class="coffeeselectweekday" name="">
-          <option value="1">Monday</option>
-          <option value="2">Tuesday</option>
-          <option value="3">Wednesday</option>
-          <option value="4">Thursday</option>
-          <option value="5">Friday</option>
-          <option value="6">Saturday</option>
-          <option value="7">Sunday</option>
-        </select>
-        <select class="typeofcup" name="">
-          <option value="0">Did you bring your own cup?</option>
-          <option value="0">No</option>
-          <option value="1">Yes</option>
-        </select>
-        <input type="number" id="cupsofcoffee" name="coffee" placeholder="How many cups would you like?"><br>
-        <select class="sleeve">
-          <option value="0">Sleeve</option>
-          <option value="0">No</option>
-          <option value="1">Yes</option>
-        </select>
-        <select class="straw">
-          <option value="0">Straw</option>
-          <option value="0">No</option>
-          <option value="1">Yes</option>
-        </select><br>
+<!--  start of forms -->
 
 
-
-      <button type="submit" name="button" class="btn btn-info">Calculate My Footprint!</button>
-      </form>
-
-
-
-
-    </div>
 
 
 
