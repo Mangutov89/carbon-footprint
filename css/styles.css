@@ -4,6 +4,9 @@ body {
   background-size: cover;
   height: 100%;
 }
+.inputForm, .coffeeForm, .takeoutForm {
+  display: none;
+}
 .container {
   margin-top: 50px;
   /* background-color: white;
@@ -65,4 +68,12 @@ select, input {
   color: #86BBD8;
   text-decoration: underline;
   cursor: context-menu;
+}
+
+.sideBaring {
+  float: left;
+  width: 270px;
+  padding: 5px;
+  background: none;
+
 }

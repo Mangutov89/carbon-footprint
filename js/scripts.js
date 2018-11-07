@@ -113,6 +113,22 @@ $(document).ready(function() {
     rows:[],
   };
 
+    $(".transitNav").click(function(){
+      $(".inputForm").show();
+      $(".takeoutForm").hide();
+      $(".coffeeForm").hide();
+    })
+    $(".takeoutNav").click(function(){
+      $(".takeoutForm").show();
+      $(".inputForm").hide();
+      $(".coffeeForm").hide();
+    })
+    $(".coffeeNav").click(function(){
+      $(".coffeeForm").show();
+      $(".takeoutForm").hide();
+      $(".takeoutForm").hide();
+    })
+
 
 
   $(".inputForm").submit(function(event) {
