@@ -56,6 +56,10 @@ Coffee.prototype.totalCoffeeAccessories = function() {
   return this.total + " grams of CO2";
 }
 
+Coffee.prototype.totalCoffeeForGraph = function() {
+  return this.total;
+}
+
 
 function toGoContainers (paperBag, plasticBag, recycledPaperBox, paperBox, bagasse, utensils, napkins) {
   this.paperBag = paperBag,
@@ -101,9 +105,14 @@ $(document).ready(function() {
     rows:[],
   };
   var transitData = {
-    header: ["takeout", "Amount CO2"],
+    header: ["transit", "Amount CO2"],
     rows:[],
   };
+  var coffeeData = {
+    header: ["coffee", "Amount CO2"],
+    rows:[],
+  };
+
 
 
   $(".inputForm").submit(function(event) {
@@ -271,18 +280,25 @@ $(document).ready(function() {
 
     if (coffeeDayofWeek === 1) {
       $("#mondayCoffeeFootprint").text(coffeeOrder.totalCoffeeAccessories());
+      coffeeData.rows.push(["Monday", coffeeOrder.totalCoffeeForGraph()]);
     } else if (coffeeDayofWeek === 2) {
       $("#tuesdayCoffeeFootprint").text(coffeeOrder.totalCoffeeAccessories());
+      coffeeData.rows.push(["Tuesday", coffeeOrder.totalCoffeeForGraph()]);
     } else if (coffeeDayofWeek === 3) {
       $("#wednesdayCoffeeFootprint").text(coffeeOrder.totalCoffeeAccessories());
+      coffeeData.rows.push(["Wednesday", coffeeOrder.totalCoffeeForGraph()]);
     } else if (coffeeDayofWeek === 4) {
       $("#thursdayCoffeeFootprint").text(coffeeOrder.totalCoffeeAccessories());
+      coffeeData.rows.push(["Thursday", coffeeOrder.totalCoffeeForGraph()]);
     } else if (coffeeDayofWeek === 5) {
       $("#fridayCoffeeFootprint").text(coffeeOrder.totalCoffeeAccessories());
+      coffeeData.rows.push(["Friday", coffeeOrder.totalCoffeeForGraph()]);
     } else if (coffeeDayofWeek === 6) {
       $("#saturdayCoffeeFootprint").text(coffeeOrder.totalCoffeeAccessories());
+      coffeeData.rows.push(["Saturday", coffeeOrder.totalCoffeeForGraph()]);
     } else if (coffeeDayofWeek === 7) {
       $("#sundayCoffeeFootprint").text(coffeeOrder.totalCoffeeAccessories());
+      coffeeData.rows.push(["Sunday", coffeeOrder.totalCoffeeForGraph()]);
     }
 
   })
@@ -320,6 +336,24 @@ $(document).ready(function() {
     $(".close").click(function() {
       $(".transitModal").hide();
       $("#transitGraphId").empty()
+    })
+  })
+  $(".coffeeGraph-button").click(function() {
+    var chart = anychart.column();
+
+    chart.data(coffeeData);
+
+    // set the chart title
+    chart.title("Coffee Footprint in Grams of CO2");
+
+    // draw
+    chart.container("coffeeGraphId");
+    chart.draw();
+    $(".coffeeModal").show();
+
+    $(".close").click(function() {
+      $(".coffeeModal").hide();
+      $("#coffeeGraphId").empty()
     })
   })
 });
