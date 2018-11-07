@@ -96,6 +96,7 @@
       </div>
       <div class="row">
       <form class="inputForm col-md-4" >
+        <h3>How did you commute today?</h3>
         <p>Select day of the week to track:</p>
         <select class="selectWeekday" name="">
           <option value="1">Monday</option>
@@ -106,8 +107,7 @@
           <option value="6">Saturday</option>
           <option value="7">Sunday</option>
         </select><br>
-        <input type="number" id="mileage" name="commute" placeholder="How many miles is your commute?">
-        <p>How did you commute today?</p>
+        <input type="number" id="mileage" name="commute" placeholder="How many miles is your commute?"><br>
         <input type="radio" name="transportation" value="4" id="car">
         <label for="car">Car</label><br>
         <input type="radio" name="transportation" value="3" id="transit">
@@ -116,10 +116,11 @@
         <label for="bike">Walk or bike</label><br>
         <input type="radio" name="transportation" value="1" id="carPool">
         <label for="carPool">Carpool</label><br>
-        <button type="submit" name="button" class="btn btn-info">Calculate My Footprint!</button>
+        <button type="submit" name="button" class="btn btn-info">Calculate Commute Footprint!</button>
       </form>
 
       <form class="takeoutForm col-md-4">
+        <h3>Order takeout today?</h3>
         <p>Select day of the week to track:</p>
         <select class="takeoutSelectWeekday" name="">
           <option value="1">Monday</option>
@@ -130,7 +131,6 @@
           <option value="6">Saturday</option>
           <option value="7">Sunday</option>
         </select><br>
-        <p>Did you have takeout today?</p>
 
         <select class="paperBag">
           <option value="0">Paper Bag</option>
@@ -197,11 +197,12 @@
         </select><br>
 
 
-        <button type="submit" class="btn btn-info">Submit</button>
+        <button type="submit" class="btn btn-info">Calculate Take Out Footprint!</button>
       </form>
 
       <form class="coffeeForm col-md-4">
-        <h3>Coffee Choices:</h3>
+        <h3>Order coffee today?</h3>
+        <p>Select day of the week to track:</p>
         <select class="coffeeselectweekday" name="">
           <option value="1">Monday</option>
           <option value="2">Tuesday</option>
@@ -230,7 +231,7 @@
 
 
 
-      <button type="submit" name="button" class="btn btn-info">Calculate My Footprint!</button>
+      <button type="submit" name="button" class="btn btn-info">Calculate My Coffee Footprint!</button>
       </form>
 
 
@@ -253,11 +254,18 @@
       <div class="suggestions">
         <div class="row">
           <div class="col-md-3">
+            <h4 class="h4Click">General Commute Statistics</h4>
+            <ul class="suggestList">
+              <li>Transportation accounts for 29% of greenhouse gas emissions in the U.S.</li>
+              <li>Subways and metros produce on average 76% lower greenhouse gas emissions than an *SOV/ppm</li>
+              <li>Riding a light rail train produces 62% less than an *SOV/ppm</li>
+              <li>Riding the bus produces 33% less than an *SOV/ppm</li>
+              <li>*SOV: single-occupancy vehicle; ppm : per passenger mile;  </li>
+            </ul>
 
 
           </div>
           <div class="col-md-3">
-
 
           </div>
           <div class="col-md-3">

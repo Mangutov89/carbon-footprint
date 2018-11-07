@@ -367,4 +367,12 @@ $(document).ready(function() {
       $("#coffeeGraphId").empty()
     })
   })
+  $(".suggestList").hide();
+  $(".h4Click").click(function() {
+    $(".suggestList").toggle();
+  // $(".h4").click(function() {
+  //   $(".this").hide();
+    // });
+  });
+
 });
