@@ -414,6 +414,10 @@ $(document).ready(function() {
   });
   $(".takeoutTrashClick").click(function() {
     $(".takeoutVideoModal").show();
+    $(".reduceEmissionsList").hide();
+    $(".differentCommuteList").hide();
+      $(".suggestList").hide();
+      
     $(".close").click(function() {
       $(".takeoutVideoModal").hide();
     })
