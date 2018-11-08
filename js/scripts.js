@@ -477,7 +477,6 @@ $(document).ready(function() {
   $(".totalSubmitForm").click(function() {
     console.log("clicked");
     $("#mondayDailyFootprint").text(totalArray.mondayTotal());
-    // $(".totalSubmitForm").hide();
     $("#tuesdayDailyFootprint").text(totalArray.tuesdayTotal());
     $("#wednesdayDailyFootprint").text(totalArray.wednesdayTotal());
     $("#thursdayDailyFootprint").text(totalArray.thursdayTotal());
