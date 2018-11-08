@@ -13,6 +13,8 @@ _This website first collects what type of transportation a user uses and the dis
 
 ## Setup/Installation Requirements
 
+###[GH-Pages](malyphong619.github.io/Carbon-Footprint)
+
 * _Clone this repository_
 * _Open folder containing Carbon-Footprint_
 * _Open index.html_
