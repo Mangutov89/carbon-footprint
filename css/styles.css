@@ -20,7 +20,7 @@ body {
 
 h1 {
   font-size: 75px;
-  font-family: 'Gruppo', cursive;
+  font-family: monospace;
   text-align: center;
 }
 
@@ -42,7 +42,7 @@ h2 {
 
 .modal-title {
   font-size: 35px;
-  font-family: 'Gruppo', cursive;
+  font-family: monospace;
   text-align: center;
   font-weight: bold;
 }

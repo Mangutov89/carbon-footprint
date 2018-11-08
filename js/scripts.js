@@ -1,8 +1,8 @@
 function empty(list) {
   console.log(list);
-    list = [];
-    console.log(list);
-  }
+  list = [];
+  console.log(list);
+}
 
 function Carbon(transportation, mile, total) {
   this.transportation = transportation,
@@ -21,14 +21,6 @@ Carbon.prototype.calculateBike = function() {
 
 Carbon.prototype.calculateBus = function() {
   return this.total = this.mile * 63;
-}
-
-Carbon.prototype.carbonFootprint = function() {
-  if (this.total > 3696) {
-    return alert("you need to use more public transportation")
-  } else {
-    return alert("you're doing fine!")
-  }
 }
 
 function Coffee(cupType, count, sleeve, straw) {
@@ -83,7 +75,7 @@ toGoContainers.prototype.arraySum = function() {
   this.napkins = this.napkins * 4;
   this.totalTakeoutCarbonArray.push(this.paperBag,this.plasticBag,this.recycledPaperBox,this.paperBox,this.bagasse,this.utensils,this.napkins);
 
-return this.totalTakeoutCarbonArray;
+  return this.totalTakeoutCarbonArray;
 }
 
 toGoContainers.prototype.totalCarbon = function() {
@@ -95,8 +87,6 @@ toGoContainers.prototype.totalCarbon = function() {
 toGoContainers.prototype.totalCarbonforGraph = function() {
   return this.totalCarbonSum;
 }
-
-
 
 
 $(document).ready(function() {
@@ -113,24 +103,24 @@ $(document).ready(function() {
     rows:[],
   };
 
-    $(".transitNav").click(function(){
-      $(".mainDisplayDiv").hide();
-      $(".inputForm").show();
-      $(".takeoutForm").hide();
-      $(".coffeeForm").hide();
-    })
-    $(".takeoutNav").click(function(){
-      $(".mainDisplayDiv").hide();
-      $(".takeoutForm").show();
-      $(".inputForm").hide();
-      $(".coffeeForm").hide();
-    })
-    $(".coffeeNav").click(function(){
-      $(".mainDisplayDiv").hide();
-      $(".coffeeForm").show();
-      $(".takeoutForm").hide();
-      $(".inputForm").hide();
-    })
+  $(".transitNav").click(function(){
+    $(".mainDisplayDiv").hide();
+    $(".inputForm").show();
+    $(".takeoutForm").hide();
+    $(".coffeeForm").hide();
+  })
+  $(".takeoutNav").click(function(){
+    $(".mainDisplayDiv").hide();
+    $(".takeoutForm").show();
+    $(".inputForm").hide();
+    $(".coffeeForm").hide();
+  })
+  $(".coffeeNav").click(function(){
+    $(".mainDisplayDiv").hide();
+    $(".coffeeForm").show();
+    $(".takeoutForm").hide();
+    $(".inputForm").hide();
+  })
 
 
 
@@ -186,34 +176,34 @@ $(document).ready(function() {
       } else if(dayOfWeek === "2") {
         $("#tuesdayCommuteFootprint").text(dailyCarbon.calculateBus() + " grams of CO2 per passenger per mile");
         $("#tuesdayCommute").text("Bus");
-          transitData.rows.push(["Tuesday", dailyCarbon.calculateBus()]);
+        transitData.rows.push(["Tuesday", dailyCarbon.calculateBus()]);
       } else if(dayOfWeek === "3") {
         $("#wednesdayCommuteFootprint").text(dailyCarbon.calculateBus() + " grams of CO2 per passenger per mile");
         $("#wednesdayCommute").text("Bus");
-          transitData.rows.push(["Wednesday", dailyCarbon.calculateBus()]);
+        transitData.rows.push(["Wednesday", dailyCarbon.calculateBus()]);
       } else if (dayOfWeek === "4"){
         $("#thursdayCommuteFootprint").text(dailyCarbon.calculateBus() + " grams of CO2 per passenger per mile");
         $("#thursdayCommute").text("Bus");
-          transitData.rows.push(["Thursday", dailyCarbon.calculateBus()]);
+        transitData.rows.push(["Thursday", dailyCarbon.calculateBus()]);
       } else if (dayOfWeek === "5"){
         $("#fridayCommuteFootprint").text(dailyCarbon.calculateBus() + " grams of CO2 per passenger per mile");
         $("#fridayCommute").text("Bus");
-          transitData.rows.push(["Friday", dailyCarbon.calculateBus()]);
+        transitData.rows.push(["Friday", dailyCarbon.calculateBus()]);
       } else if (dayOfWeek === "6"){
         $("#saturdayCommuteFootprint").text(dailyCarbon.calculateBus() + " grams of CO2 per passenger per mile");
         $("#saturdayCommute").text("Bus");
-          transitData.rows.push(["Saturday", dailyCarbon.calculateBus()]);
+        transitData.rows.push(["Saturday", dailyCarbon.calculateBus()]);
       } else if (dayOfWeek === "7"){
         $("#sundayCommuteFootprint").text(dailyCarbon.calculateBus() + " grams of CO2 per passenger per mile");
         $("#sundayCommute").text("Bus");
-          transitData.rows.push(["Sunday", dailyCarbon.calculateBus()]);
+        transitData.rows.push(["Sunday", dailyCarbon.calculateBus()]);
       }
     }
     if (transportation === "2") {
       if(dayOfWeek === "1") {
         $("#mondayCommuteFootprint").text(dailyCarbon.calculateBike() + " grams of CO2 per rider");
         $("#mondayCommute").text("Bike/Walk");
-          transitData.rows.push(["Monday", dailyCarbon.calculateBike()]);
+        transitData.rows.push(["Monday", dailyCarbon.calculateBike()]);
       } else if(dayOfWeek === "2") {
         $("#tuesdayCommuteFootprint").text(dailyCarbon.calculateBike() + " grams of CO2 per rider");
         $("#tuesdayCommute").text("Bike/Walk");
@@ -237,7 +227,7 @@ $(document).ready(function() {
       } else if (dayOfWeek === "7"){
         $("#sundayCommuteFootprint").text(dailyCarbon.calculateBike() + " grams of CO2 per rider");
         $("#sundayCommute").text("Bike/Walk");
-          transitData.rows.push(["Sunday", dailyCarbon.calculateBike()]);
+        transitData.rows.push(["Sunday", dailyCarbon.calculateBike()]);
       }
     }
   });
@@ -258,28 +248,28 @@ $(document).ready(function() {
 
 
 
-      if (takeoutDayofWeek === 1) {
-        $("#mondayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
-        takeOutData.rows.push(["Takeout - Monday", takeoutCarbon.totalCarbonforGraph()]);
-      } else if (takeoutDayofWeek === 2) {
-        $("#tuesdayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
-        takeOutData.rows.push(["Tuesday", takeoutCarbon.totalCarbonforGraph()]);
-      } else if (takeoutDayofWeek === 3) {
-        $("#wednesdayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
-        takeOutData.rows.push(["Wednesday", takeoutCarbon.totalCarbonforGraph()]);
-      } else if (takeoutDayofWeek === 4) {
-        $("#thursdayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
-        takeOutData.rows.push(["Thursday", takeoutCarbon.totalCarbonforGraph()]);
-      } else if (takeoutDayofWeek === 5) {
-        $("#fridayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
-        takeOutData.rows.push(["Friday", takeoutCarbon.totalCarbonforGraph()]);
-      } else if (takeoutDayofWeek === 6) {
-        $("#saturdayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
-        takeOutData.rows.push(["Saturday", takeoutCarbon.totalCarbonforGraph()]);
-      } else if (takeoutDayofWeek === 7) {
-        $("#sundayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
-        takeOutData.rows.push(["Sunday", takeoutCarbon.totalCarbonforGraph()]);
-      }
+    if (takeoutDayofWeek === 1) {
+      $("#mondayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
+      takeOutData.rows.push(["Takeout - Monday", takeoutCarbon.totalCarbonforGraph()]);
+    } else if (takeoutDayofWeek === 2) {
+      $("#tuesdayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
+      takeOutData.rows.push(["Tuesday", takeoutCarbon.totalCarbonforGraph()]);
+    } else if (takeoutDayofWeek === 3) {
+      $("#wednesdayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
+      takeOutData.rows.push(["Wednesday", takeoutCarbon.totalCarbonforGraph()]);
+    } else if (takeoutDayofWeek === 4) {
+      $("#thursdayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
+      takeOutData.rows.push(["Thursday", takeoutCarbon.totalCarbonforGraph()]);
+    } else if (takeoutDayofWeek === 5) {
+      $("#fridayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
+      takeOutData.rows.push(["Friday", takeoutCarbon.totalCarbonforGraph()]);
+    } else if (takeoutDayofWeek === 6) {
+      $("#saturdayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
+      takeOutData.rows.push(["Saturday", takeoutCarbon.totalCarbonforGraph()]);
+    } else if (takeoutDayofWeek === 7) {
+      $("#sundayTakeoutFootprint").text(takeoutCarbon.totalCarbon());
+      takeOutData.rows.push(["Sunday", takeoutCarbon.totalCarbonforGraph()]);
+    }
   });
   $(".coffeeForm").submit(function(event) {
     event.preventDefault();
@@ -340,7 +330,7 @@ $(document).ready(function() {
     $(".close").click(function() {
       $(".takeoutModal").hide();
       $("#takeoutGraphId").empty()
-  })
+    })
   })
   $(".transitGraph-button").click(function() {
     var chart = anychart.column();
@@ -348,9 +338,7 @@ $(document).ready(function() {
     var dataColor2 = chart.column(transitData);
     dataColor2.normal().fill("#2F4858", 1);
     dataColor2.normal().stroke("#2F4858", null);
-
     chart.data(transitData);
-
     // set the chart title
     chart.title("Transit Footprint in Grams of CO2");
 
@@ -370,12 +358,9 @@ $(document).ready(function() {
     var dataColor3 = chart.column(coffeeData);
     dataColor3.normal().fill("#9EE493", 1);
     dataColor3.normal().stroke("#9EE493", null);
-
     chart.data(coffeeData);
-
     // set the chart title
     chart.title("Coffee Footprint in Grams of CO2");
-
     // draw
     chart.container("coffeeGraphId");
     chart.draw();
@@ -386,7 +371,6 @@ $(document).ready(function() {
       $("#coffeeGraphId").empty()
     })
   })
-
   $(".suggestClick").click(function() {
     $(".suggestList").show();
     $(".reduceEmissionsList").hide();
@@ -398,17 +382,17 @@ $(document).ready(function() {
     $(".suggestList").hide();
     $(".differentCommuteList").hide();
     $(".reduceEmissionsList").addClass("factsAddClass");
-});
-$(".linkClick").click(function() {
-  $(".differentCommuteList").show();
-  $(".suggestList").hide();
-  $(".reduceEmissionsList").hide();
-  $(".differentCommuteList").addClass("factsAddClass");
-});
-$(".takeoutTrashClick").click(function() {
-  $(".takeoutVideoModal").show();
-  $(".close").click(function() {
-    $(".takeoutVideoModal").hide();
-  })
-});
+  });
+  $(".linkClick").click(function() {
+    $(".differentCommuteList").show();
+    $(".suggestList").hide();
+    $(".reduceEmissionsList").hide();
+    $(".differentCommuteList").addClass("factsAddClass");
+  });
+  $(".takeoutTrashClick").click(function() {
+    $(".takeoutVideoModal").show();
+    $(".close").click(function() {
+      $(".takeoutVideoModal").hide();
+    })
+  });
 });
