@@ -8,14 +8,12 @@ function divide(a, b) {
   return a / b
 }
 
-
 function Carbon(transportation, mile) {
   this.transportation = transportation,
   this.mile = mile,
   this.total = 0
 
 }
-
 
 // results approximately in grams of CO2 per passenger per mile
 Carbon.prototype.calculateCar = function() {
@@ -451,6 +449,8 @@ $(document).ready(function() {
     totalsData.rows.push(["Saturday", saturdayAddition.reduce(add, 0)]);
     totalsData.rows.push(["Sunday", sundayAddition.reduce(add, 0)]);
 
+    empty(mondayAddition);
+
 
     // this is to try and get average
     // var weeklyAverage = divide(weeklyTotalsum, weeklySum.length);
@@ -533,7 +533,7 @@ $(document).ready(function() {
 
     $(".close").click(function() {
       $(".totalsModal").hide();
-      $("#totalsGraphId").empty()
+      $("#totalsGraphId").empty();
     })
   })
 });
