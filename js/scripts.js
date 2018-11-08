@@ -417,7 +417,7 @@ $(document).ready(function() {
     $(".reduceEmissionsList").hide();
     $(".differentCommuteList").hide();
       $(".suggestList").hide();
-      
+
     $(".close").click(function() {
       $(".takeoutVideoModal").hide();
     })
@@ -453,9 +453,13 @@ $(document).ready(function() {
     totalsData.rows.push(["Saturday", saturdayAddition.reduce(add, 0)]);
     totalsData.rows.push(["Sunday", sundayAddition.reduce(add, 0)]);
 
-    empty(mondayAddition);
-
-
+    $(".totalSubmitForm").hide();
+    $(".cccTabs").hide();
+    $(".inputForm").hide();
+    $(".takeoutForm").hide();
+    $(".coffeeForm").hide();
+    $(".mainDisplayDiv").show();
+    $(".newWeeklyInput").show();
     // this is to try and get average
     // var weeklyAverage = divide(weeklyTotalsum, weeklySum.length);
     // var roundedWeeklyAverage = Math.floor(weeklyAverage);
@@ -539,5 +543,9 @@ $(document).ready(function() {
       $(".totalsModal").hide();
       $("#totalsGraphId").empty();
     })
+  })
+
+  $(".newWeeklyInput").click(function(){
+    location.reload();
   })
 });

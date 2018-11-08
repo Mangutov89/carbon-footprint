@@ -10,7 +10,7 @@ body {
   margin: 100px;
 }
 
-.inputForm, .coffeeForm, .takeoutForm, .suggestList, .reduceEmissionsList, .differentCommuteList, .total, .mondayClickable {
+.inputForm, .coffeeForm, .takeoutForm, .suggestList, .reduceEmissionsList, .differentCommuteList, .total, .mondayClickable, .newWeeklyInput {
   display: none;
 }
 .container {
