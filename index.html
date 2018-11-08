@@ -53,8 +53,6 @@
         <label for="transit">Public Transit</label><br>
         <input type="radio" name="transportation" value="2" id="bike">
         <label for="bike">Walk or bike</label><br>
-        <input type="radio" name="transportation" value="1" id="carPool">
-        <label for="carPool">Carpool</label><br>
         <button type="submit" name="button" class="btn btn-info">Calculate My Footprint!</button>
       </form>
       <form class="row takeoutForm">
@@ -179,7 +177,7 @@
             <p>Commuted by: <span id="mondayCommute"></span></p>
             <p>Commute Footprint: <span id="mondayCommuteFootprint"></span></p>
             <p>Cuisine Footprint: <span id="mondayTakeoutFootprint"></span></p>
-            <p>Total Daily Carbon Footprint: <span id="mondayDailyFootprint"></span></p>
+            <p>Total Daily Carbon Footprint:</span> <span id="mondayDailyFootprint"></span></p>
           </div>
         </div>
         <div class="col-md-3 dayColumns" id="day2">
@@ -244,8 +242,11 @@
         </div>
         <div class="col-md-3 dayColumns"  id="weekSummary">
           <h2>Summary</h2>
+            <button type="button" class="totalSubmitForm">Click me</button>
           <div class="summaryTracker">
-            <p>Your weekly average commute footprint:</p>
+            <p>Your weekly total commute footprint:</p>
+            <h1 class="total" id="weeklyTotal"></h1>
+            <h3 class="total">grams of CO2</h3>
           </div>
         </div>
       </div>
@@ -255,19 +256,20 @@
       </div>
 
       <ul class="nav nav-tabs nav-justified">
-        <li class="nav-item">
-          <a class="nav-link nav-tabs" href="#"><h4 class="suggestClick">General Commute Statistics</h4></a>
+        <li class="nav-item suggestClick">
+          <a class="nav-link nav-tabs" href="#"><h4>General Commute Statistics</h4></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link nav-tabs" href="#"><h4 class="reduceClick">Reduce car emissions</h4></a>
+        <li class="nav-item reduceClick">
+          <a class="nav-link nav-tabs" href="#"><h4>Reduce car emissions</h4></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link nav-tabs" href="#"><h4 class="linkClick">Different Commutes</h4></a>
+        <li class="nav-item linkClick">
+          <a class="nav-link nav-tabs" href="#"><h4>Different Commutes</h4></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link nav-tabs" href="#"><h4 class="takeoutTrashClick">Takeout creates Trash</h4></a>
+        <li class="nav-item takeoutTrashClick">
+          <a class="nav-link nav-tabs" href="#"><h4>Takeout creates Trash</h4></a>
         </li>
       </ul>
+
 
       <!-- suggestion -->
       <div class="suggestions">

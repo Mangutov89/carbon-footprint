@@ -10,12 +10,15 @@ body {
   margin: 100px;
 }
 
-.inputForm, .coffeeForm, .takeoutForm, .suggestList, .reduceEmissionsList, .differentCommuteList {
+.inputForm, .coffeeForm, .takeoutForm, .suggestList, .reduceEmissionsList, .differentCommuteList, .total, .mondayClickable {
   display: none;
 }
 .container {
   width: 65%;
   overflow: hidden;
+}
+.summaryTracker {
+  text-align: center;
 }
 
 h1 {
