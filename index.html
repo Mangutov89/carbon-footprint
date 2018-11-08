@@ -177,7 +177,7 @@
             <p>Commuted by: <span id="mondayCommute"></span></p>
             <p>Commute Footprint: <span id="mondayCommuteFootprint"></span></p>
             <p>Cuisine Footprint: <span id="mondayTakeoutFootprint"></span></p>
-            <p>Total Daily Carbon Footprint:</span> <span id="mondayDailyFootprint"></span></p>
+            <p>Total Daily Carbon Footprint: <span id="mondayDailyFootprint"></span></p>
           </div>
         </div>
         <div class="col-md-3 dayColumns" id="day2">
@@ -242,7 +242,7 @@
         </div>
         <div class="col-md-3 dayColumns"  id="weekSummary">
           <h2>Summary</h2>
-            <button type="button" class="totalSubmitForm">Calculate Week Total:</button>
+          <button type="button" class="totalSubmitForm">Calculate Week Total:</button>
           <div class="summaryTracker">
             <!-- <p>Your weekly total commute footprint:</p> -->
             <h1 class="total" id="weeklyTotal"></h1>
@@ -333,7 +333,6 @@
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
-
           </div>
           <div class="modal-body">
             <div id="transitGraphId"></div>
@@ -341,6 +340,23 @@
         </div>
       </div>
     </div>
+
+    <div class="modal totalsModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">Daily Totals</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id="totalsGraphId"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="modal coffeeModal" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -373,6 +389,7 @@
       </div>
     </div>
 
+
     <!-- modals -->
     <footer>
       <ul class="nav nav-tabs nav-justified">
@@ -384,6 +401,9 @@
         </li>
         <li class="nav-item takeoutGraph-button">
           <a class="nav-link nav-tabs" href="#"><h4>Cuisine Emissions Graph</h4></a>
+        </li>
+        <li class="nav-item totalsGraph-button">
+          <a class="nav-link nav-tabs" href="#"><h4>Daily Total Emissions Graph</h4></a>
         </li>
       </ul>
     </footer>
