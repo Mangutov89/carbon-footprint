@@ -53,7 +53,7 @@
         <label for="transit">Public Transit</label><br>
         <input type="radio" name="transportation" value="2" id="bike">
         <label for="bike">Walk or bike</label><br>
-        <button type="submit" name="button" class="btn btn-info">Calculate My Footprint!</button>
+        <button type="submit" name="button" class="btn btn-info">Add to Footprint!</button>
       </form>
       <form class="row takeoutForm">
         <p>Select day of the week to track:</p>
@@ -131,7 +131,7 @@
           <option value="4">4</option>
           <option value="5">5</option>
         </select><br>
-        <button type="submit" class="btn btn-info">Calculate My Footprint!</button>
+        <button type="submit" class="btn btn-info">Add to Footprint!</button>
       </form>
       <form class="row coffeeForm">
 
@@ -151,7 +151,7 @@
           <option value="0">No</option>
           <option value="1">Yes</option>
         </select>
-        <input type="number" id="cupsofcoffee" name="coffee" placeholder="How many cups would you like?"><br>
+        <input type="number" id="cupsofcoffee" name="coffee" placeholder="How many cups did you have?"><br>
         <select class="sleeve">
           <option value="0">Sleeve</option>
           <option value="0">No</option>
@@ -162,7 +162,7 @@
           <option value="0">No</option>
           <option value="1">Yes</option>
         </select><br>
-        <button type="submit" name="button" class="btn btn-info">Calculate My Footprint!</button>
+        <button type="submit" name="button" class="btn btn-info">Add to Footprint!</button>
       </form>
     </div>
     <!-- end of forms -->
@@ -242,9 +242,9 @@
         </div>
         <div class="col-md-3 dayColumns"  id="weekSummary">
           <h2>Summary</h2>
-            <button type="button" class="totalSubmitForm">Click me</button>
+            <button type="button" class="totalSubmitForm">Calculate Week Total:</button>
           <div class="summaryTracker">
-            <p>Your weekly total commute footprint:</p>
+            <!-- <p>Your weekly total commute footprint:</p> -->
             <h1 class="total" id="weeklyTotal"></h1>
             <h3 class="total">grams of CO2</h3>
           </div>
@@ -260,13 +260,13 @@
           <a class="nav-link nav-tabs" href="#"><h4>General Commute Statistics</h4></a>
         </li>
         <li class="nav-item reduceClick">
-          <a class="nav-link nav-tabs" href="#"><h4>Reduce car emissions</h4></a>
+          <a class="nav-link nav-tabs" href="#"><h4>Reduce Car emissions</h4></a>
         </li>
         <li class="nav-item linkClick">
           <a class="nav-link nav-tabs" href="#"><h4>Different Commutes</h4></a>
         </li>
         <li class="nav-item takeoutTrashClick">
-          <a class="nav-link nav-tabs" href="#"><h4>Takeout creates Trash</h4></a>
+          <a class="nav-link nav-tabs" href="#"><h4>Takeout Creates Trash</h4></a>
         </li>
       </ul>
 
@@ -376,14 +376,14 @@
     <!-- modals -->
     <footer>
       <ul class="nav nav-tabs nav-justified">
-        <li class="nav-item">
-          <a class="nav-link nav-tabs" href="#"><h4 class="transitGraph-button">Commute Emissions Graph</h4></a>
+        <li class="nav-item coffeeGraph-button">
+          <a class="nav-link nav-tabs" href="#"><h4>Coffee Emissions Graph</h4></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link nav-tabs" href="#"><h4 class="takeoutGraph-button">Cuisine Emissions Graph</h4></a>
+        <li class="nav-item transitGraph-button">
+          <a class="nav-link nav-tabs" href="#"><h4>Commute Emissions Graph</h4></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link nav-tabs" href="#"><h4 class="coffeeGraph-button">Coffee Emissions Graph</h4></a>
+        <li class="nav-item takeoutGraph-button">
+          <a class="nav-link nav-tabs" href="#"><h4>Cuisine Emissions Graph</h4></a>
         </li>
       </ul>
     </footer>

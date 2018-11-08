@@ -133,3 +133,18 @@ footer {
   border: 1px solid;
   min-height: 100px;
 }
+
+.totalSubmitForm {
+  background: none;
+  border: 1px solid;
+  border-radius: 4px;
+}
+
+.totalSubmitForm:hover {
+  background-color: #5bc0de;
+  color: white;
+}
+
+#weekSummary {
+  text-align: center;
+}
