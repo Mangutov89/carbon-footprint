@@ -405,5 +405,10 @@ $(".linkClick").click(function() {
   $(".reduceEmissionsList").hide();
   $(".differentCommuteList").addClass("factsAddClass");
 });
-
+$(".takeoutTrashClick").click(function() {
+  $(".takeoutVideoModal").show();
+  $(".close").click(function() {
+    $(".takeoutVideoModal").hide();
+  })
+});
 });
