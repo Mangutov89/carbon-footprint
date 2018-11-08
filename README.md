@@ -13,7 +13,7 @@ _This website first collects what type of transportation a user uses and the dis
 
 ## Setup/Installation Requirements
 
-###[GH-Pages](https://brookeruu.github.io/Carbon-Footprint-Tracker/)
+###[GH-Pages](https://mangutov89.github.io/carbon-footprint/)
 
 * _Clone this repository_
 * _Open folder containing Carbon-Footprint_
